@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Termos de Uso do TrustPanel - Plataforma de gerenciamento de certificados digitais A1 e A3. Conheça nossos termos e condições de uso.">
+    <title>Termos de Uso - TrustPanel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .legal-page {
+            padding-top: calc(70px + var(--spacing-2xl));
+            background: var(--color-white);
+            min-height: 100vh;
+        }
+        
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-4xl) var(--spacing-md);
+        }
+        
+        .legal-header {
+            text-align: center;
+            margin-bottom: var(--spacing-4xl);
+            padding-bottom: var(--spacing-2xl);
+            border-bottom: 2px solid rgba(22, 198, 79, 0.1);
+        }
+        
+        .legal-title {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .legal-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--color-gray);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .legal-update {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: rgba(22, 198, 79, 0.1);
+            color: var(--color-primary);
+            border-radius: var(--border-radius-xl);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            border: 1px solid rgba(22, 198, 79, 0.2);
+        }
+        
+        .legal-section {
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .legal-section h2 {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 1px solid rgba(22, 198, 79, 0.2);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .legal-section h3 {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-secondary);
+            margin: var(--spacing-xl) 0 var(--spacing-md);
+        }
+        
+        .legal-section h2 i {
+            color: var(--color-primary);
+        }
+        
+        .legal-section p {
+            line-height: 1.7;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-gray-dark);
+        }
+        
+        .legal-section ul, .legal-section ol {
+            margin-bottom: var(--spacing-lg);
+            padding-left: var(--spacing-xl);
+        }
+        
+        .legal-section li {
+            line-height: 1.7;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-gray-dark);
+        }
+        
+        .legal-highlight {
+            background: rgba(22, 198, 79, 0.05);
+            border-left: 4px solid var(--color-primary);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .legal-highlight p {
+            margin-bottom: 0;
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .legal-contact {
+            background: var(--color-gray-light);
+            border-radius: var(--border-radius-xl);
+            padding: var(--spacing-2xl);
+            margin-top: var(--spacing-4xl);
+            text-align: center;
+        }
+        
+        .legal-contact h3 {
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-2xl);
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--color-gray-dark);
+        }
+        
+        .contact-item i {
+            color: var(--color-primary);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: var(--spacing-xl);
+            right: var(--spacing-xl);
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition-normal);
+            z-index: var(--z-fixed);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .legal-content {
+                padding: var(--spacing-2xl) var(--spacing-md);
+            }
+            
+            .legal-title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .legal-section h2 {
+                font-size: var(--font-size-xl);
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="TrustPanel Logo">
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Início</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#features" class="nav__link">Recursos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#pricing" class="nav__link">Preços</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">Contato</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="cadastro.html" class="btn btn--primary">Começar Agora</a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="legal-page">
+            <div class="legal-content">
+                <div class="legal-header">
+                    <h1 class="legal-title">Termos de Uso</h1>
+                    <p class="legal-subtitle">
+                        Termos e condições de uso da plataforma TrustPanel para gerenciamento de certificados digitais
+                    </p>
+                    <div class="legal-update">
+                        <i class="fas fa-calendar-alt"></i>
+                        Última atualização: Janeiro de 2025
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-handshake"></i> 1. Aceitação dos Termos</h2>
+                    <p>
+                        Ao acessar e utilizar a plataforma TrustPanel ("Plataforma"), você concorda em cumprir e estar vinculado a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, não deve utilizar nossos serviços.
+                    </p>
+                    <p>
+                        Estes termos constituem um acordo legal entre você (pessoa física ou jurídica) e a TrustPanel, estabelecendo os direitos e obrigações relacionados ao uso de nossa plataforma de gerenciamento de certificados digitais.
+                    </p>
+                    <div class="legal-highlight">
+                        <p><strong>Importante:</strong> O uso continuado da plataforma após alterações nestes termos constitui aceitação das modificações.</p>
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-cogs"></i> 2. Descrição dos Serviços</h2>
+                    <p>
+                        A TrustPanel é uma plataforma SaaS (Software as a Service) especializada no gerenciamento inteligente de certificados digitais A1 e A3, oferecendo:
+                    </p>
+                    <ul>
+                        <li>Gerenciamento centralizado de certificados digitais A1 e A3</li>
+                        <li>Monitoramento automático de validade e vencimentos</li>
+                        <li>Alertas e notificações personalizáveis</li>
+                        <li>Renovação automática de certificados</li>
+                        <li>Relatórios detalhados e analytics</li>
+                        <li>Gestão de equipes e controle de acesso</li>
+                        <li>API para integração com sistemas terceiros</li>
+                        <li>Backup seguro e recuperação de certificados</li>
+                        <li>Suporte técnico especializado</li>
+                    </ul>
+                    
+                    <h3>2.1 Certificados de Terceiros</h3>
+                    <p>
+                        Nossa plataforma permite o gerenciamento de certificados digitais emitidos por Autoridades Certificadoras (ACs) terceiras. A TrustPanel atua exclusivamente como facilitador tecnológico, não sendo responsável pela emissão, validade ou autenticidade dos certificados gerenciados.
+                    </p>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-user-shield"></i> 3. Responsabilidades do Usuário</h2>
+                    
+                    <h3>3.1 Conta e Acesso</h3>
+                    <p>Você é responsável por:</p>
+                    <ul>
+                        <li>Manter a confidencialidade de suas credenciais de acesso</li>
+                        <li>Notificar imediatamente sobre qualquer uso não autorizado</li>
+                        <li>Garantir que as informações fornecidas sejam precisas e atualizadas</li>
+                        <li>Cumprir todas as leis e regulamentações aplicáveis</li>
+                    </ul>
+                    
+                    <h3>3.2 Uso dos Certificados</h3>
+                    <p>Ao utilizar nossa plataforma para gerenciar certificados digitais, você declara e garante que:</p>
+                    <ul>
+                        <li>Possui autorização legal para gerenciar os certificados carregados</li>
+                        <li>Os certificados são legítimos e obtidos de ACs reconhecidas</li>
+                        <li>Cumprirá todas as políticas das Autoridades Certificadoras</li>
+                        <li>Não utilizará certificados para atividades ilegais ou fraudulentas</li>
+                        <li>Manterá a segurança das chaves privadas associadas</li>
+                    </ul>
+                    
+                    <h3>3.3 Uso Proibido</h3>
+                    <p>É expressamente proibido:</p>
+                    <ul>
+                        <li>Tentar acessar sistemas ou dados não autorizados</li>
+                        <li>Interferir no funcionamento da plataforma</li>
+                        <li>Realizar engenharia reversa do software</li>
+                        <li>Compartilhar credenciais de acesso com terceiros</li>
+                        <li>Utilizar a plataforma para fins ilegais ou não éticos</li>
+                        <li>Sobrecarregar intencionalmente os sistemas</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-shield-alt"></i> 4. Segurança e Proteção de Dados</h2>
+                    
+                    <h3>4.1 Medidas de Segurança</h3>
+                    <p>
+                        Implementamos medidas técnicas e organizacionais apropriadas para proteger seus dados e certificados, incluindo:
+                    </p>
+                    <ul>
+                        <li>Criptografia AES-256 para dados em repouso</li>
+                        <li>Comunicação segura via HTTPS/TLS</li>
+                        <li>Controles de acesso baseados em funções</li>
+                        <li>Monitoramento contínuo de segurança</li>
+                        <li>Backups regulares e seguros</li>
+                        <li>Auditoria de logs de acesso</li>
+                    </ul>
+                    
+                    <h3>4.2 Conformidade</h3>
+                    <p>
+                        Nossa plataforma está em conformidade com:
+                    </p>
+                    <ul>
+                        <li>Lei Geral de Proteção de Dados (LGPD)</li>
+                        <li>Normas da ICP-Brasil</li>
+                        <li>Padrões internacionais de segurança</li>
+                        <li>Regulamentações setoriais aplicáveis</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-certificate"></i> 5. Certificados Digitais e Autoridades Certificadoras</h2>
+                    
+                    <h3>5.1 Relacionamento com ACs</h3>
+                    <p>
+                        A TrustPanel não é uma Autoridade Certificadora. Facilitamos o gerenciamento de certificados emitidos por ACs terceiras, mantendo relacionamentos técnicos quando necessário para funcionalidades como renovação automática.
+                    </p>
+                    
+                    <h3>5.2 Validade e Autenticidade</h3>
+                    <p>
+                        Embora nossa plataforma realize verificações técnicas básicas, a responsabilidade pela validade, autenticidade e conformidade legal dos certificados permanece com:
+                    </p>
+                    <ul>
+                        <li>A Autoridade Certificadora emissora</li>
+                        <li>O titular do certificado</li>
+                        <li>O usuário que carrega o certificado na plataforma</li>
+                    </ul>
+                    
+                    <h3>5.3 Renovação Automática</h3>
+                    <p>
+                        Quando disponível, o serviço de renovação automática depende da cooperação das ACs. Não garantimos a disponibilidade contínua deste serviço para todos os tipos de certificados ou ACs.
+                    </p>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-credit-card"></i> 6. Planos e Pagamentos</h2>
+                    
+                    <h3>6.1 Planos de Serviço</h3>
+                    <p>
+                        Oferecemos diferentes planos de serviço com funcionalidades e limites específicos. Os detalhes de cada plano estão disponíveis em nossa página de preços e podem ser alterados mediante aviso prévio.
+                    </p>
+                    
+                    <h3>6.2 Cobrança e Pagamento</h3>
+                    <ul>
+                        <li>Os pagamentos são processados mensalmente ou anualmente, conforme o plano escolhido</li>
+                        <li>Todas as taxas são cobradas em Reais (BRL)</li>
+                        <li>O não pagamento pode resultar na suspensão ou cancelamento do serviço</li>
+                        <li>Reembolsos seguem nossa política específica de reembolso</li>
+                    </ul>
+                    
+                    <h3>6.3 Alterações de Preço</h3>
+                    <p>
+                        Reservamo-nos o direito de alterar nossos preços mediante aviso prévio de 30 dias. Alterações não afetam períodos já pagos.
+                    </p>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-exclamation-triangle"></i> 7. Limitações de Responsabilidade</h2>
+                    
+                    <h3>7.1 Limitações Gerais</h3>
+                    <p>
+                        A TrustPanel não será responsável por:
+                    </p>
+                    <ul>
+                        <li>Danos indiretos, incidentais ou consequenciais</li>
+                        <li>Perda de lucros, dados ou oportunidades de negócio</li>
+                        <li>Falhas de certificados emitidos por ACs terceiras</li>
+                        <li>Interrupções de serviço de ACs ou provedores terceiros</li>
+                        <li>Uso inadequado ou não autorizado de certificados</li>
+                        <li>Decisões de negócio baseadas em informações da plataforma</li>
+                    </ul>
+                    
+                    <h3>7.2 Limite Máximo</h3>
+                    <p>
+                        Nossa responsabilidade total, em qualquer circunstância, não excederá o valor pago pelo usuário nos 12 meses anteriores ao evento que deu origem à reclamação.
+                    </p>
+                    
+                    <h3>7.3 Força Maior</h3>
+                    <p>
+                        Não seremos responsáveis por falhas ou atrasos causados por circunstâncias além de nosso controle razoável, incluindo desastres naturais, ações governamentais, falhas de internet ou ataques cibernéticos.
+                    </p>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-clock"></i> 8. Disponibilidade do Serviço</h2>
+                    
+                    <h3>8.1 SLA (Service Level Agreement)</h3>
+                    <p>
+                        Nos esforçamos para manter uma disponibilidade de 99.9% do serviço, excluindo:
+                    </p>
+                    <ul>
+                        <li>Manutenções programadas (notificadas com antecedência)</li>
+                        <li>Falhas de provedores terceiros</li>
+                        <li>Circunstâncias de força maior</li>
+                        <li>Problemas causados pelo usuário</li>
+                    </ul>
+                    
+                    <h3>8.2 Manutenção</h3>
+                    <p>
+                        Reservamo-nos o direito de realizar manutenções necessárias, preferencialmente em horários de menor uso e com aviso prévio quando possível.
+                    </p>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-edit"></i> 9. Modificações dos Termos</h2>
+                    <p>
+                        Podemos modificar estes termos a qualquer momento. Alterações significativas serão comunicadas com pelo menos 30 dias de antecedência através de:
+                    </p>
+                    <ul>
+                        <li>Notificação por email</li>
+                        <li>Aviso na plataforma</li>
+                        <li>Atualização da data nesta página</li>
+                    </ul>
+                    <p>
+                        O uso continuado da plataforma após as alterações constitui aceitação dos novos termos.
+                    </p>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-times-circle"></i> 10. Rescisão</h2>
+                    
+                    <h3>10.1 Rescisão pelo Usuário</h3>
+                    <p>
+                        Você pode cancelar sua conta a qualquer momento através das configurações da plataforma ou entrando em contato conosco. O cancelamento será efetivo ao final do período de cobrança atual.
+                    </p>
+                    
+                    <h3>10.2 Rescisão pela TrustPanel</h3>
+                    <p>
+                        Podemos suspender ou encerrar sua conta em caso de:
+                    </p>
+                    <ul>
+                        <li>Violação destes termos</li>
+                        <li>Não pagamento de taxas devidas</li>
+                        <li>Uso fraudulento ou ilegal da plataforma</li>
+                        <li>Risco à segurança ou integridade do serviço</li>
+                    </ul>
+                    
+                    <h3>10.3 Efeitos da Rescisão</h3>
+                    <p>
+                        Após a rescisão:
+                    </p>
+                    <ul>
+                        <li>O acesso à plataforma será interrompido</li>
+                        <li>Dados poderão ser exportados por período limitado</li>
+                        <li>Certificados e dados serão removidos conforme nossa política de retenção</li>
+                        <li>Obrigações financeiras pendentes permanecerão válidas</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-balance-scale"></i> 11. Lei Aplicável e Jurisdição</h2>
+                    <p>
+                        Estes termos são regidos pelas leis da República Federativa do Brasil. Qualquer disputa será resolvida preferencialmente por mediação ou arbitragem, ou, em última instância, pelos tribunais competentes do Brasil.
+                    </p>
+                    <p>
+                        Para usuários internacionais, as leis brasileiras se aplicam às relações contratuais, respeitando-se as normas imperativas do país do usuário quando aplicáveis.
+                    </p>
+                </div>
+
+                <div class="legal-section">
+                    <h2><i class="fas fa-file-contract"></i> 12. Disposições Gerais</h2>
+                    
+                    <h3>12.1 Integralidade do Acordo</h3>
+                    <p>
+                        Estes termos, juntamente com nossa Política de Privacidade, constituem o acordo completo entre as partes, substituindo acordos anteriores sobre o mesmo assunto.
+                    </p>
+                    
+                    <h3>12.2 Severabilidade</h3>
+                    <p>
+                        Se qualquer disposição destes termos for considerada inválida, as demais disposições permanecerão em pleno vigor.
+                    </p>
+                    
+                    <h3>12.3 Cessão</h3>
+                    <p>
+                        Você não pode ceder seus direitos ou obrigações sob estes termos sem nosso consentimento prévio por escrito. Podemos ceder nossos direitos mediante notificação.
+                    </p>
+                    
+                    <h3>12.4 Renúncia</h3>
+                    <p>
+                        A falha em exercer qualquer direito não constitui renúncia a esse direito.
+                    </p>
+                </div>
+
+                <div class="legal-contact">
+                    <h3>Contato para Questões Legais</h3>
+                    <p>Para dúvidas sobre estes termos ou questões legais, entre em contato conosco:</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>trustpanel@outlook.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(66) 99262-3898</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container grid">
+                <div class="footer__content">
+                    <div class="footer__brand">
+                        <img src="images/logo2.png" alt="TrustPanel Logo">
+                    </div>
+                    <p class="footer__description">
+                        A plataforma mais confiável para gerenciamento de certificados digitais A1.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.linkedin.com/company/trustpanel" class="footer__social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/trust.panel/" class="footer__social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__title">Produto</h4>
+                    <ul class="footer__list">
+                        <li><a href="index.html#features" class="footer__link">Recursos</a></li>
+                        <li><a href="index.html#pricing" class="footer__link">Preços</a></li>
+                        <li><a href="index.html#interface" class="footer__link">Demo</a></li>
+                        <li><a href="#" class="footer__link">API</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__title">Empresa</h4>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Sobre</a></li>
+                        <li><a href="#" class="footer__link">Blog</a></li>
+                        <li><a href="#" class="footer__link">Carreiras</a></li>
+                        <li><a href="#" class="footer__link">Imprensa</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__title">Suporte</h4>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Central de Ajuda</a></li>
+                        <li><a href="index.html#contact" class="footer__link">Contato</a></li>
+                        <li><a href="#" class="footer__link">Status</a></li>
+                        <li><a href="#" class="footer__link">Documentação</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2025 TrustPanel. Todos os direitos reservados. | 
+                   <a href="politica-de-privacidade.html" class="footer__link">Política de Privacidade</a> | 
+                   <a href="termos-de-uso.html" class="footer__link">Termos de Uso</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
