@@ -339,52 +339,43 @@ function staggerFeatureCards() {
 
 // ===== TESTIMONIAL CAROUSEL (Optional Enhancement) =====
 function initTestimonialCarousel() {
-    const testimonialCards = document.querySelectorAll('.testimonial__card');
-    let currentTestimonial = 0;
-    
-    // Add navigation dots for testimonials on mobile
-    if (window.innerWidth <= 768 && testimonialCards.length > 1) {
-        const testimonialSection = document.querySelector('.testimonials');
-        const dotsContainer = document.createElement('div');
-        dotsContainer.className = 'testimonial-dots';
-        dotsContainer.style.cssText = `
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 2rem;
-        `;
-        
-        testimonialCards.forEach((_, index) => {
-            const dot = document.createElement('span');
-            dot.className = `testimonial-dot ${index === 0 ? 'active' : ''}`;
-            dot.style.cssText = `
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background: ${index === 0 ? 'var(--color-primary)' : 'rgba(22, 198, 79, 0.3)'};
-                cursor: pointer;
-                transition: all 0.3s;
-            `;
-            
-            dot.addEventListener('click', () => {
-                // Update active dot
-                document.querySelectorAll('.testimonial-dot').forEach(d => {
-                    d.style.background = 'rgba(22, 198, 79, 0.3)';
-                });
-                dot.style.background = 'var(--color-primary)';
-                
-                // Scroll to testimonial
-                testimonialCards[index].scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'nearest'
-                });
-            });
-            
-            dotsContainer.appendChild(dot);
-        });
-        
-        testimonialSection.appendChild(dotsContainer);
-    }
+  const testimonialSection = document.querySelector('.testimonials');
+  if (!testimonialSection) return;
+
+  // Remove qualquer dots existente para evitar duplicação
+  testimonialSection.querySelectorAll('.testimonial-dots').forEach(n => n.remove());
+
+  // Só mostra no mobile
+  if (window.innerWidth > 768) return;
+
+  const testimonialCards = document.querySelectorAll('.testimonial__card');
+  if (testimonialCards.length <= 1) return;
+
+  const dotsContainer = document.createElement('div');
+  dotsContainer.className = 'testimonial-dots';
+  dotsContainer.style.cssText = `
+    display:flex; justify-content:center; gap:0.5rem; margin-top:2rem;
+  `;
+
+  testimonialCards.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.className = `testimonial-dot ${index === 0 ? 'active' : ''}`;
+    dot.style.cssText = `
+      width:12px; height:12px; border-radius:50%;
+      background:${index === 0 ? 'var(--color-primary)' : 'rgba(22,198,79,0.3)'};
+      cursor:pointer; transition:all .3s;
+    `;
+    dot.addEventListener('click', () => {
+      testimonialSection.querySelectorAll('.testimonial-dot').forEach(d => {
+        d.style.background = 'rgba(22, 198, 79, 0.3)';
+      });
+      dot.style.background = 'var(--color-primary)';
+      testimonialCards[index].scrollIntoView({ behavior:'smooth', block:'nearest' });
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  testimonialSection.appendChild(dotsContainer);
 }
 
 // ===== PERFORMANCE OPTIMIZATIONS =====
