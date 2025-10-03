@@ -961,30 +961,57 @@ function validateAndFinishRegistration() {
     }
 }
 
-function finishRegistration() {
-    // Show loading state
-    if (finishRegistrationBtn) {
-        const originalText = finishRegistrationBtn.innerHTML;
-        finishRegistrationBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processando...';
-        finishRegistrationBtn.disabled = true;
-        
-        // Simulate API call
-        setTimeout(() => {
-            // Populate confirmation data
-            populateConfirmationData();
-            
-            // Go to confirmation step
-            goToStep(3);
-            
-            // Reset button (in case user goes back)
-            finishRegistrationBtn.innerHTML = originalText;
-            finishRegistrationBtn.disabled = false;
-            
-            // Show success notification
-            showNotification('Cadastro realizado com sucesso!', 'success');
-        }, 2000);
+async function finishRegistration() {
+  if (!finishRegistrationBtn) return;
+
+  // Valida dados da etapa atual
+  if (!validateCurrentStep()) return;
+
+  // Salva os dados atuais do formulário
+  saveCurrentStepData();
+
+  // Mostra loading
+  const originalText = finishRegistrationBtn.innerHTML;
+  finishRegistrationBtn.innerHTML =
+    '<i class="fas fa-spinner fa-spin"></i> Processando...';
+  finishRegistrationBtn.disabled = true;
+
+  try {
+
+    const response = await fetch(
+      "https://api.demo.trustpanel.com.br/v1/api/companies/landing-signup/",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          company_name: companyNameInput?.value || "",
+          company_cnpj: cnpjInput?.value || "",
+          company_email: companyEmailInput?.value || "",
+          company_phone: companyPhoneInput?.value || "",
+          user_email: adminEmailInput?.value || "",
+          user_name: adminNameInput?.value || "",
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Erro ao criar usuário");
     }
+
+    populateConfirmationData();
+    goToStep(3);
+    showNotification("Cadastro realizado com sucesso!", "success");
+  } catch (error) {
+    console.error("Erro na API:", error);
+    showNotification(error.message || "Erro ao cadastrar", "error");
+  } finally {
+    // Reset do botão
+    finishRegistrationBtn.innerHTML = originalText;
+    finishRegistrationBtn.disabled = false;
+  }
 }
+
 
 function populateConfirmationData() {
     // Company data
