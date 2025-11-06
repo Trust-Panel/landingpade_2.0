@@ -159,24 +159,35 @@ if (contactForm) {
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
         
-        // Add loading state
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        submitBtn.disabled = true;
+        // Format message for WhatsApp
+        const whatsappMessage = `
+*Nova Mensagem - TrustPanel* 📧
+
+*Nome:* ${data.name}
+*Email:* ${data.email}
+*Empresa:* ${data.company}
+${data.phone ? `*Telefone:* ${data.phone}` : ''}
+
+*Mensagem:*
+${data.message}
+        `.trim();
         
-        // Simulate form submission (replace with actual API call)
+        // WhatsApp number (format: country code + number without spaces or special characters)
+        const whatsappNumber = '5566992623898';
+        
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+        
+        // Open WhatsApp
+        window.open(whatsappURL, '_blank');
+        
+        // Show success message
+        showNotification('Redirecionando para o WhatsApp...', 'success');
+        
+        // Reset form after a short delay
         setTimeout(() => {
-            // Show success message
-            showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
-            
-            // Reset form
             contactForm.reset();
-            
-            // Reset button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
+        }, 1000);
     });
 }
 
