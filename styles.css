@@ -584,13 +584,6 @@ body {
   animation-delay: 2s;
 }
 
-.hero__floating-card--3 {
-  bottom: -5%;
-  left: 15%;
-  animation-delay: 1s;
-  padding: var(--spacing-md);
-}
-
 .floating-card__icon {
   width: clamp(36px, 6vh, 48px);
   height: clamp(36px, 6vh, 48px);
@@ -1256,7 +1249,7 @@ body {
 .security-highlight__icon {
   width: 80px;
   height: 80px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   display: flex;
@@ -1265,11 +1258,13 @@ body {
   flex-shrink: 0;
   position: relative;
   z-index: 2;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .security-highlight__icon i {
   font-size: 2.5rem;
   color: white;
+  display: block;
 }
 
 .security-highlight__content {
@@ -1900,14 +1895,16 @@ body {
   }
   
   .workflow__step {
-    flex-direction: column;
-    gap: var(--spacing-lg);
+    flex-direction: row;
+    gap: var(--spacing-xl);
     margin-bottom: var(--spacing-3xl);
+    align-items: flex-start;
   }
   
   .step__marker {
     width: 80px;
     height: 80px;
+    flex-shrink: 0;
   }
   
   .marker__icon {
@@ -1924,7 +1921,8 @@ body {
   }
   
   .step__content {
-    padding: 0;
+    padding: var(--spacing-md) 0;
+    flex: 1;
   }
   
   .step__title {
@@ -1951,6 +1949,11 @@ body {
     width: 100%;
     justify-content: center;
     white-space: normal;
+    text-align: center;
+  }
+  
+  /* Contact - Mobile */
+  .contact__hero .section__header {
     text-align: center;
   }
   
