@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="Images/favicon.jpg" type="image/jpg">
+    <script src="translations.js"></script>
 </head>
 
 <body>
@@ -39,21 +40,34 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">Início</a>
+                        <a href="#home" class="nav__link active-link" data-i18n="nav.home">Início</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#features" class="nav__link">Recursos</a>
+                        <a href="#features" class="nav__link" data-i18n="nav.features">Recursos</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#how-it-works" class="nav__link">Como Funciona</a>
+                        <a href="#how-it-works" class="nav__link" data-i18n="nav.howItWorks">Como Funciona</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contato</a>
+                        <a href="#contact" class="nav__link" data-i18n="nav.contact">Contato</a>
                     </li>
                 </ul>
                 <div class="nav__close" id="nav-close">
                     <i class="fas fa-times"></i>
                 </div>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="pt-BR" title="Português Brasil">
+                    🇧🇷
+                </button>
+                <button class="lang-btn" data-lang="en" title="English">
+                    🇺🇸
+                </button>
+                <button class="lang-btn" data-lang="es" title="Español">
+                    🇪🇸
+                </button>
             </div>
         </nav>
     </header>
@@ -65,12 +79,12 @@
                 <div class="hero__content">
                     <div class="hero__badge">
                         <span class="badge__dot"></span>
-                        <span>Gerenciamento de Certificados A1</span>
+                        <span data-i18n="hero.badge">Gerenciamento de Certificados A1</span>
                     </div>
                     <h1 class="hero__title">
-                        Pare de perder dinheiro com <span class="text-gradient">Certificados Vencidos</span>
+                        <span data-i18n="hero.title">Pare de perder dinheiro com </span><span class="text-gradient" data-i18n="hero.titleHighlight">Certificados Vencidos</span>
                     </h1>
-                    <p class="hero__description">
+                    <p class="hero__description" data-i18n="hero.description">
                         Automatize 100% da gestão dos seus certificados digitais. Receba alertas antes do vencimento e
                         evite multas e bloqueios operacionais.
                     </p>
@@ -88,15 +102,15 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <h3 class="launch-badge__heading">Lançamento 1º Trimestre 2026</h3>
-                            <p class="launch-badge__text">Condições Exclusivas para Pioneiros</p>
+                            <h3 class="launch-badge__heading" data-i18n="hero.launchTitle">Lançamento 1º Trimestre 2026</h3>
+                            <p class="launch-badge__text" data-i18n="hero.launchText">Condições Exclusivas para Pioneiros</p>
                         </div>
                     </div>
 
                     <div class="hero__actions">
                         <a href="https://wa.me/5566992623898" class="btn btn--primary btn--large btn--pulse">
                             <i class="fab fa-whatsapp"></i>
-                            Falar com Especialista
+                            <span data-i18n="hero.btnPrimary">Falar com Especialista</span>
                         </a>
                     </div>
 
@@ -104,15 +118,15 @@
                     <div class="hero__trust-badges">
                         <div class="trust-badge">
                             <i class="fas fa-shield-alt"></i>
-                            <span>LGPD Compliant</span>
+                            <span data-i18n="trust.lgpd">LGPD Compliant</span>
                         </div>
                         <div class="trust-badge">
                             <i class="fas fa-lock"></i>
-                            <span>Criptografia AES-256</span>
+                            <span data-i18n="trust.encryption">Criptografia AES-256</span>
                         </div>
                         <div class="trust-badge">
                             <i class="fas fa-cloud-upload-alt"></i>
-                            <span>Backup Automático</span>
+                            <span data-i18n="trust.backup">Backup Automático</span>
                         </div>
                     </div>
                 </div>
@@ -125,8 +139,8 @@
                                 <i class="fas fa-certificate"></i>
                             </div>
                             <div class="floating-card__content">
-                                <span class="card__title">150 Certificados</span>
-                                <span class="card__subtitle">Ativos e monitorados</span>
+                                <span class="card__title" data-i18n="float.certificates">150 Certificados</span>
+                                <span class="card__subtitle" data-i18n="float.active">Ativos e monitorados</span>
                             </div>
                             <div class="floating-card__status success">
                                 <i class="fas fa-check"></i>
@@ -137,8 +151,8 @@
                                 <i class="fas fa-bell"></i>
                             </div>
                             <div class="floating-card__content">
-                                <span class="card__title">Alerta de Renovação</span>
-                                <span class="card__subtitle">Vence em 30 dias</span>
+                                <span class="card__title" data-i18n="float.alert">Alerta de Renovação</span>
+                                <span class="card__subtitle" data-i18n="float.expires">Vence em 30 dias</span>
                             </div>
                         </div>
                     </div>
@@ -154,8 +168,8 @@
                                 <i class="fas fa-rocket"></i>
                             </div>
                             <div class="stat-info">
-                                <span class="stat-number">Lançamento</span>
-                                <span class="stat-text">Em Fase Beta</span>
+                                <span class="stat-number" data-i18n="stats.launch">Lançamento</span>
+                                <span class="stat-text" data-i18n="stats.launchText">Em Fase Beta</span>
                             </div>
                         </div>
                         <div class="stat-item">
@@ -164,7 +178,7 @@
                             </div>
                             <div class="stat-info">
                                 <span class="stat-number">100%</span>
-                                <span class="stat-text">Foco no Cliente</span>
+                                <span class="stat-text" data-i18n="stats.focus">Foco no Cliente</span>
                             </div>
                         </div>
                         <div class="stat-item">
@@ -172,8 +186,8 @@
                                 <i class="fas fa-gift"></i>
                             </div>
                             <div class="stat-info">
-                                <span class="stat-number">Exclusivo</span>
-                                <span class="stat-text">Condições Especiais</span>
+                                <span class="stat-number" data-i18n="stats.exclusive">Exclusivo</span>
+                                <span class="stat-text" data-i18n="stats.exclusiveText">Condições Especiais</span>
                             </div>
                         </div>
                         <div class="stat-item">
@@ -181,8 +195,8 @@
                                 <i class="fas fa-star"></i>
                             </div>
                             <div class="stat-info">
-                                <span class="stat-number">Pioneiros</span>
-                                <span class="stat-text">Seja um dos Primeiros</span>
+                                <span class="stat-number" data-i18n="stats.pioneers">Pioneiros</span>
+                                <span class="stat-text" data-i18n="stats.pioneersText">Seja um dos Primeiros</span>
                             </div>
                         </div>
                     </div>
@@ -196,12 +210,12 @@
                 <div class="section__header">
                     <span class="section__subtitle">
                         <i class="fas fa-sparkles"></i>
-                        Recursos Principais
+                        <span data-i18n="features.subtitle">Recursos Principais</span>
                     </span>
                     <h2 class="section__title">
-                        Tudo que você precisa para <span class="text-gradient">nunca mais perder prazos</span>
+                        <span data-i18n="features.title">Tudo que você precisa para </span><span class="text-gradient" data-i18n="features.titleHighlight">nunca mais perder prazos</span>
                     </h2>
-                    <p class="section__description">
+                    <p class="section__description" data-i18n="features.description">
                         Automatize, monitore e controle todos os seus certificados digitais em uma plataforma completa e
                         intuitiva
                     </p>
@@ -209,15 +223,19 @@
 
                 <div class="features__grid features__grid--three grid">
                     <div class="feature__card feature__card--highlight" data-aos="fade-up" data-aos-delay="100">
-                        <div class="feature__badge">Essencial</div>
+                        <div class="feature__badge" data-i18n="feature1.badge">Essencial</div>
                         <div class="feature__icon-wrapper">
                             <div class="feature__icon">
                                 <i class="fas fa-bell"></i>
                             </div>
                             <div class="feature__icon-bg"></div>
                         </div>
-                        <h3 class="feature__title">Alertas de vencimento e prazos de renovação</h3>
-                        <p class="feature__description">
+                        <h3 class="feature__title">
+                            <span class="lang-text" data-lang="pt-BR">Alertas de vencimento e prazos de renovação</span>
+                            <span class="lang-text" data-lang="en" style="display:none;">Expiration alerts and renewal deadlines</span>
+                            <span class="lang-text" data-lang="es" style="display:none;">Alertas de vencimiento y plazos de renovación</span>
+                        </h3>
+                        <p class="feature__description" data-i18n="feature1.description">
                             Nunca mais perca prazos importantes. Receba notificações automáticas com antecedência para
                             renovar seus certificados no momento certo.
                         </p>
@@ -226,23 +244,23 @@
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span>Alertas personalizáveis por período</span>
+                                <span data-i18n="feature1.list1">Alertas personalizáveis por período</span>
                             </li>
                             <li>
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span>Notificações via email e WhatsApp</span>
+                                <span data-i18n="feature1.list2">Notificações via email e WhatsApp</span>
                             </li>
                             <li>
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span>Dashboard com visão de vencimentos</span>
+                                <span data-i18n="feature1.list3">Dashboard com visão de vencimentos</span>
                             </li>
                         </ul>
                         <a href="https://wa.me/5566992623898" class="feature__link">
-                            Saiba mais
+                            <span data-i18n="feature1.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -254,8 +272,12 @@
                             </div>
                             <div class="feature__icon-bg"></div>
                         </div>
-                        <h3 class="feature__title">Armazenamento seguro e organizado dos certificados</h3>
-                        <p class="feature__description">
+                        <h3 class="feature__title">
+                            <span class="lang-text" data-lang="pt-BR">Armazenamento seguro e organizado dos certificados</span>
+                            <span class="lang-text" data-lang="en" style="display:none;">Secure and organized certificate storage</span>
+                            <span class="lang-text" data-lang="es" style="display:none;">Almacenamiento seguro y organizado de certificados</span>
+                        </h3>
+                        <p class="feature__description" data-i18n="feature2.description">
                             Mantenha todos os seus certificados digitais em um local seguro, com criptografia de ponta e
                             organização inteligente.
                         </p>
@@ -264,23 +286,23 @@
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span>Criptografia AES-256 bit</span>
+                                <span data-i18n="feature2.list1">Criptografia AES-256 bit</span>
                             </li>
                             <li>
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span>Backup automático e redundante</span>
+                                <span data-i18n="feature2.list2">Backup automático e redundante</span>
                             </li>
                             <li>
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span>Organização por categorias e tags</span>
+                                <span data-i18n="feature2.list3">Organização por categorias e tags</span>
                             </li>
                         </ul>
                         <a href="https://wa.me/5566992623898" class="feature__link">
-                            Saiba mais
+                            <span data-i18n="feature2.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -292,8 +314,12 @@
                             </div>
                             <div class="feature__icon-bg"></div>
                         </div>
-                        <h3 class="feature__title">Permissões por usuário e grupo (acesso mínimo necessário)</h3>
-                        <p class="feature__description">
+                        <h3 class="feature__title">
+                            <span class="lang-text" data-lang="pt-BR">Permissões por usuário e grupo (acesso mínimo necessário)</span>
+                            <span class="lang-text" data-lang="en" style="display:none;">Permissions per user and group (minimum access required)</span>
+                            <span class="lang-text" data-lang="es" style="display:none;">Permisos por usuario y grupo (acceso mínimo necesario)</span>
+                        </h3>
+                        <p class="feature__description" data-i18n="feature3.description">
                             Controle total sobre quem pode acessar, visualizar ou gerenciar cada certificado, seguindo o
                             princípio de menor privilégio.
                         </p>
@@ -302,23 +328,23 @@
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span>Níveis de acesso personalizados</span>
+                                <span data-i18n="feature3.list1">Níveis de acesso personalizados</span>
                             </li>
                             <li>
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span>Grupos de usuários e departamentos</span>
+                                <span data-i18n="feature3.list2">Grupos de usuários e departamentos</span>
                             </li>
                             <li>
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span>Log completo de atividades</span>
+                                <span data-i18n="feature3.list3">Log completo de atividades</span>
                             </li>
                         </ul>
                         <a href="https://wa.me/5566992623898" class="feature__link">
-                            Saiba mais
+                            <span data-i18n="feature3.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -328,12 +354,12 @@
                 <div class="features__cta">
                     <div class="cta-card">
                         <div class="cta-card__content">
-                            <h3>Seja um dos primeiros a transformar sua gestão de certificados</h3>
-                            <p>Vagas limitadas para empresas pioneiras com condições especiais de lançamento</p>
+                            <h3 data-i18n="featuresCta.title">Seja um dos primeiros a transformar sua gestão de certificados</h3>
+                            <p data-i18n="featuresCta.description">Vagas limitadas para empresas pioneiras com condições especiais de lançamento</p>
                         </div>
                         <a href="https://wa.me/5566992623898" class="btn btn--primary btn--large">
                             <i class="fab fa-whatsapp"></i>
-                            Garantir Minha Vaga
+                            <span data-i18n="featuresCta.btn">Garantir Minha Vaga</span>
                         </a>
                     </div>
                 </div>
@@ -346,12 +372,12 @@
                 <div class="section__header">
                     <span class="section__subtitle">
                         <i class="fas fa-route"></i>
-                        Como Funciona
+                        <span data-i18n="howItWorks.subtitle">Como Funciona</span>
                     </span>
                     <h2 class="section__title">
-                        Simples, seguro e <span class="text-gradient">sem complicação</span>
+                        <span data-i18n="howItWorks.title">Simples, seguro e </span><span class="text-gradient" data-i18n="howItWorks.titleHighlight">sem complicação</span>
                     </h2>
-                    <p class="section__description">
+                    <p class="section__description" data-i18n="howItWorks.description">
                         Em 5 passos você terá controle total sobre todos os certificados da sua empresa
                     </p>
                 </div>
@@ -367,13 +393,13 @@
                             </div>
                         </div>
                         <div class="step__content">
-                            <h3 class="step__title">Administrador Principal</h3>
-                            <p class="step__description">
+                            <h3 class="step__title" data-i18n="step1.title">Administrador Principal</h3>
+                            <p class="step__description" data-i18n="step1.description">
                                 Criamos um usuário chave (CEO, Gestor ou Supervisor) com acesso de administrador para gerenciar toda a plataforma
                             </p>
                             <div class="step__badge">
                                 <i class="fas fa-crown"></i>
-                                Controle Total
+                                <span data-i18n="step1.badge">Controle Total</span>
                             </div>
                         </div>
                     </div>
@@ -386,13 +412,13 @@
                             </div>
                         </div>
                         <div class="step__content">
-                            <h3 class="step__title">Cadastro de Certificados</h3>
-                            <p class="step__description">
+                            <h3 class="step__title" data-i18n="step2.title">Cadastro de Certificados</h3>
+                            <p class="step__description" data-i18n="step2.description">
                                 O administrador envia os certificados digitais para nossa plataforma. Armazenamento seguro com criptografia AES-256
                             </p>
                             <div class="step__badge">
                                 <i class="fas fa-lock"></i>
-                                100% Seguro
+                                <span data-i18n="step2.badge">100% Seguro</span>
                             </div>
                         </div>
                     </div>
@@ -405,13 +431,13 @@
                             </div>
                         </div>
                         <div class="step__content">
-                            <h3 class="step__title">Usuários & Grupos</h3>
-                            <p class="step__description">
+                            <h3 class="step__title" data-i18n="step3.title">Usuários & Grupos</h3>
+                            <p class="step__description" data-i18n="step3.description">
                                 Crie colaboradores, organize em grupos (Financeiro, Fiscal, Compras...) e defina exatamente quais certificados cada grupo pode usar
                             </p>
                             <div class="step__badge">
                                 <i class="fas fa-shield-alt"></i>
-                                Acesso Mínimo
+                                <span data-i18n="step3.badge">Acesso Mínimo</span>
                             </div>
                         </div>
                     </div>
@@ -424,13 +450,13 @@
                             </div>
                         </div>
                         <div class="step__content">
-                            <h3 class="step__title">Instalação do Aplicativo</h3>
-                            <p class="step__description">
+                            <h3 class="step__title" data-i18n="step4.title">Instalação do Aplicativo</h3>
+                            <p class="step__description" data-i18n="step4.description">
                                 No computador do colaborador (Windows ou Mac) é instalado o app leve e seguro da TrustPanel
                             </p>
                             <div class="step__badge">
                                 <i class="fas fa-download"></i>
-                                Windows & Mac
+                                <span data-i18n="step4.badge">Windows & Mac</span>
                             </div>
                         </div>
                     </div>
@@ -443,13 +469,13 @@
                             </div>
                         </div>
                         <div class="step__content">
-                            <h3 class="step__title">Login Seguro & Acesso Controlado</h3>
-                            <p class="step__description">
+                            <h3 class="step__title" data-i18n="step5.title">Login Seguro & Acesso Controlado</h3>
+                            <p class="step__description" data-i18n="step5.description">
                                 O colaborador faz login e o sistema libera apenas os certificados do seu grupo. Sem downloads, sem arquivos soltos na máquina
                             </p>
                             <div class="step__badge success">
                                 <i class="fas fa-check-circle"></i>
-                                Pronto para Usar!
+                                <span data-i18n="step5.badge">Pronto para Usar!</span>
                             </div>
                         </div>
                     </div>
@@ -461,21 +487,21 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="security-highlight__content">
-                        <h3>Segurança Garantida</h3>
-                        <p>O colaborador <strong>nunca baixa o certificado</strong> na máquina dele. Tudo fica protegido em nossa nuvem, garantindo que certificados não sejam espalhados ou usados incorretamente</p>
+                        <h3 data-i18n="security.title">Segurança Garantida</h3>
+                        <p data-i18n="security.description">O colaborador <strong>nunca baixa o certificado</strong> na máquina dele. Tudo fica protegido em nossa nuvem, garantindo que certificados não sejam espalhados ou usados incorretamente</p>
                     </div>
                     <div class="security-highlight__features">
                         <div class="security-feature">
                             <i class="fas fa-ban"></i>
-                            <span>Sem downloads locais</span>
+                            <span data-i18n="security.feature1">Sem downloads locais</span>
                         </div>
                         <div class="security-feature">
                             <i class="fas fa-eye"></i>
-                            <span>Rastreabilidade total</span>
+                            <span data-i18n="security.feature2">Rastreabilidade total</span>
                         </div>
                         <div class="security-feature">
                             <i class="fas fa-history"></i>
-                            <span>Log de todas as ações</span>
+                            <span data-i18n="security.feature3">Log de todas as ações</span>
                         </div>
                     </div>
                 </div>
@@ -491,13 +517,13 @@
                         <div class="section__header">
                             <span class="section__subtitle">
                                 <i class="fas fa-headset"></i>
-                                Entre em Contato
+                                <span data-i18n="contact.subtitle">Entre em Contato</span>
                             </span>
                             <h2 class="section__title">
-                                Transforme a gestão de certificados da sua empresa <span class="text-gradient">hoje
+                                <span data-i18n="contact.title">Transforme a gestão de certificados da sua empresa </span><span class="text-gradient" data-i18n="contact.titleHighlight">hoje
                                     mesmo</span>
                             </h2>
-                            <p class="section__description">
+                            <p class="section__description" data-i18n="contact.description">
                                 Fale com nossos especialistas e descubra como o TrustPanel pode economizar seu tempo e
                                 evitar multas por certificados vencidos
                             </p>
@@ -509,9 +535,9 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="info-card__content">
-                                    <h4>Email</h4>
+                                    <h4 data-i18n="contactInfo.email">Email</h4>
                                     <a href="mailto:trustpanel@outlook.com">trustpanel@outlook.com</a>
-                                    <span class="info-card__meta">Resposta em até 2h</span>
+                                    <span class="info-card__meta" data-i18n="contactInfo.emailMeta">Resposta em até 2h</span>
                                 </div>
                             </div>
 
@@ -520,9 +546,9 @@
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div class="info-card__content">
-                                    <h4>Horário de Atendimento</h4>
-                                    <p>Segunda a Sexta</p>
-                                    <span class="info-card__meta">8h às 18h (Horário de Brasília)</span>
+                                    <h4 data-i18n="contactInfo.hours">Horário de Atendimento</h4>
+                                    <p data-i18n="contactInfo.hoursText">Segunda a Sexta</p>
+                                    <span class="info-card__meta" data-i18n="contactInfo.hoursMeta">8h às 18h (Horário de Brasília)</span>
                                 </div>
                             </div>
 
@@ -531,9 +557,9 @@
                                     <i class="fas fa-rocket"></i>
                                 </div>
                                 <div class="info-card__content">
-                                    <h4>Onboarding Rápido</h4>
-                                    <p>Implementação</p>
-                                    <span class="info-card__meta">Suporte completo incluído</span>
+                                    <h4 data-i18n="contactInfo.onboarding">Onboarding Rápido</h4>
+                                    <p data-i18n="contactInfo.onboardingText">Implementação</p>
+                                    <span class="info-card__meta" data-i18n="contactInfo.onboardingMeta">Suporte completo incluído</span>
                                 </div>
                             </div>
                         </div>
@@ -542,8 +568,8 @@
                     <!-- Contact Form -->
                     <div class="contact__form-wrapper">
                         <div class="contact__form-header">
-                            <h3>Ou envie uma mensagem</h3>
-                            <p>Preencha o formulário e retornaremos em breve</p>
+                            <h3 data-i18n="contactForm.title">Ou envie uma mensagem</h3>
+                            <p data-i18n="contactForm.subtitle">Preencha o formulário e retornaremos em breve</p>
                         </div>
 
                         <form class="contact__form" id="contact-form">
@@ -551,19 +577,19 @@
                                 <div class="form__group">
                                     <label for="name" class="form__label">
                                         <i class="fas fa-user"></i>
-                                        Nome Completo
+                                        <span data-i18n="contactForm.name">Nome Completo</span>
                                     </label>
-                                    <input type="text" id="name" name="name" class="form__input" placeholder="Seu nome"
+                                    <input type="text" id="name" name="name" class="form__input" data-i18n="contactForm.namePlaceholder" placeholder="Seu nome"
                                         required>
                                 </div>
 
                                 <div class="form__group">
                                     <label for="email" class="form__label">
                                         <i class="fas fa-envelope"></i>
-                                        Email Corporativo
+                                        <span data-i18n="contactForm.email">Email Corporativo</span>
                                     </label>
                                     <input type="email" id="email" name="email" class="form__input"
-                                        placeholder="seu@email.com" required>
+                                        data-i18n="contactForm.emailPlaceholder" placeholder="seu@email.com" required>
                                 </div>
                             </div>
 
@@ -571,39 +597,39 @@
                                 <div class="form__group">
                                     <label for="company" class="form__label">
                                         <i class="fas fa-building"></i>
-                                        Empresa
+                                        <span data-i18n="contactForm.company">Empresa</span>
                                     </label>
                                     <input type="text" id="company" name="company" class="form__input"
-                                        placeholder="Nome da empresa" required>
+                                        data-i18n="contactForm.companyPlaceholder" placeholder="Nome da empresa" required>
                                 </div>
 
                                 <div class="form__group">
                                     <label for="phone" class="form__label">
                                         <i class="fas fa-phone"></i>
-                                        Telefone
+                                        <span data-i18n="contactForm.phone">Telefone</span>
                                     </label>
                                     <input type="tel" id="phone" name="phone" class="form__input"
-                                        placeholder="(00) 00000-0000">
+                                        data-i18n="contactForm.phonePlaceholder" placeholder="(00) 00000-0000">
                                 </div>
                             </div>
 
                             <div class="form__group">
                                 <label for="message" class="form__label">
                                     <i class="fas fa-comment-dots"></i>
-                                    Mensagem
+                                    <span data-i18n="contactForm.message">Mensagem</span>
                                 </label>
                                 <textarea id="message" name="message" class="form__textarea" rows="5"
-                                    placeholder="Como podemos ajudar sua empresa?" required></textarea>
+                                    data-i18n="contactForm.messagePlaceholder" placeholder="Como podemos ajudar sua empresa?" required></textarea>
                             </div>
 
                             <button type="submit" class="btn btn--primary btn--full btn--large">
                                 <i class="fab fa-whatsapp"></i>
-                                Enviar via WhatsApp
+                                <span data-i18n="contactForm.btn">Enviar via WhatsApp</span>
                             </button>
 
                             <p class="form__privacy">
                                 <i class="fas fa-lock"></i>
-                                Seus dados estão seguros e protegidos pela LGPD
+                                <span data-i18n="contactForm.privacy">Seus dados estão seguros e protegidos pela LGPD</span>
                             </p>
                         </form>
 
@@ -611,15 +637,15 @@
                         <div class="contact__trust">
                             <div class="trust-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Sem compromisso</span>
+                                <span data-i18n="contactTrust.item1">Sem compromisso</span>
                             </div>
                             <div class="trust-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Resposta rápida</span>
+                                <span data-i18n="contactTrust.item2">Resposta rápida</span>
                             </div>
                             <div class="trust-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Consultoria gratuita</span>
+                                <span data-i18n="contactTrust.item3">Consultoria gratuita</span>
                             </div>
                         </div>
                     </div>
@@ -636,7 +662,7 @@
                     <div class="footer__brand">
                         <img src="Images/logo2.png" alt="TrustPanel Logo">
                     </div>
-                    <p class="footer__description">
+                    <p class="footer__description" data-i18n="footer.description">
                         A plataforma mais confiável para gerenciamento de certificados digitais A1.
                     </p>
                     <div class="footer__social">
@@ -653,39 +679,39 @@
                 </div>
 
                 <div class="footer__links">
-                    <h4 class="footer__title">Produto</h4>
+                    <h4 class="footer__title" data-i18n="footer.product">Produto</h4>
                     <ul class="footer__list">
-                        <li><a href="#features" class="footer__link">Recursos</a></li>
-                        <li><a href="#how-it-works" class="footer__link">Como Funciona</a></li>
-                        <li><a href="#contact" class="footer__link">Contato</a></li>
+                        <li><a href="#features" class="footer__link" data-i18n="footer.features">Recursos</a></li>
+                        <li><a href="#how-it-works" class="footer__link" data-i18n="footer.howItWorks">Como Funciona</a></li>
+                        <li><a href="#contact" class="footer__link" data-i18n="footer.contact">Contato</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__links">
-                    <h4 class="footer__title">Empresa</h4>
+                    <h4 class="footer__title" data-i18n="footer.company">Empresa</h4>
                     <ul class="footer__list">
-                        <li><a href="#" class="footer__link">Sobre</a></li>
-                        <li><a href="#" class="footer__link">Blog</a></li>
-                        <li><a href="#" class="footer__link">Carreiras</a></li>
-                        <li><a href="#" class="footer__link">Imprensa</a></li>
+                        <li><a href="#" class="footer__link" data-i18n="footer.about">Sobre</a></li>
+                        <li><a href="#" class="footer__link" data-i18n="footer.blog">Blog</a></li>
+                        <li><a href="#" class="footer__link" data-i18n="footer.careers">Carreiras</a></li>
+                        <li><a href="#" class="footer__link" data-i18n="footer.press">Imprensa</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__links">
-                    <h4 class="footer__title">Suporte</h4>
+                    <h4 class="footer__title" data-i18n="footer.support">Suporte</h4>
                     <ul class="footer__list">
-                        <li><a href="#" class="footer__link">Central de Ajuda</a></li>
-                        <li><a href="#contact" class="footer__link">Contato</a></li>
-                        <li><a href="#" class="footer__link">Status</a></li>
-                        <li><a href="#" class="footer__link">Documentação</a></li>
+                        <li><a href="#" class="footer__link" data-i18n="footer.helpCenter">Central de Ajuda</a></li>
+                        <li><a href="#contact" class="footer__link" data-i18n="footer.contact">Contato</a></li>
+                        <li><a href="#" class="footer__link" data-i18n="footer.status">Status</a></li>
+                        <li><a href="#" class="footer__link" data-i18n="footer.documentation">Documentação</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer__bottom">
-                <p>&copy; 2025 TrustPanel. Todos os direitos reservados. |
-                    <a href="politica-de-privacidade.html" class="footer__link">Política de Privacidade</a> |
-                    <a href="termos-de-uso.html" class="footer__link">Termos de Uso</a>
+                <p><span data-i18n="footer.copyright">© 2025 TrustPanel. Todos os direitos reservados. |</span>
+                    <a href="politica-de-privacidade.html" class="footer__link" data-i18n="footer.privacy">Política de Privacidade</a> |
+                    <a href="termos-de-uso.html" class="footer__link" data-i18n="footer.terms">Termos de Uso</a>
                 </p>
             </div>
         </div>

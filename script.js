@@ -90,6 +90,8 @@ navLinks.forEach(link => {
 
 // ===== SLIDER FUNCTIONALITY =====
 function updateSlider() {
+    if (!sliderWrapper || !indicators.length) return;
+    
     const translateX = -currentSlide * 100;
     sliderWrapper.style.transform = `translateX(${translateX}%)`;
     
@@ -100,11 +102,13 @@ function updateSlider() {
 }
 
 function nextSlide() {
+    if (!sliderWrapper || !indicators.length) return;
     currentSlide = (currentSlide + 1) % totalSlides;
     updateSlider();
 }
 
 function prevSlide() {
+    if (!sliderWrapper || !indicators.length) return;
     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
     updateSlider();
 }
@@ -119,19 +123,24 @@ if (prevBtn) {
 }
 
 // Slider indicators
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        currentSlide = index;
-        updateSlider();
+if (indicators.length > 0) {
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            updateSlider();
+        });
     });
-});
+}
 
-// Auto-play slider
-let sliderInterval = setInterval(nextSlide, 5000);
+// Auto-play slider (only if slider exists)
+let sliderInterval;
+if (sliderWrapper && indicators.length > 0) {
+    sliderInterval = setInterval(nextSlide, 5000);
+}
 
 // Pause auto-play on hover
 const sliderContainer = document.querySelector('.interface__slider');
-if (sliderContainer) {
+if (sliderContainer && sliderInterval) {
     sliderContainer.addEventListener('mouseenter', () => {
         clearInterval(sliderInterval);
     });
@@ -142,13 +151,15 @@ if (sliderContainer) {
 }
 
 // Keyboard navigation for slider
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') {
-        prevSlide();
-    } else if (e.key === 'ArrowRight') {
-        nextSlide();
-    }
-});
+if (sliderWrapper && indicators.length > 0) {
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
+}
 
 // ===== FORM HANDLING =====
 if (contactForm) {
@@ -1070,3 +1081,60 @@ function hidePreloader() {
 
 // Hide preloader when page is fully loaded
 window.addEventListener('load', hidePreloader);
+
+// ===== MULTI-LANGUAGE SUPPORT =====
+let currentLang = localStorage.getItem('preferredLanguage') || 'pt-BR';
+
+// Function to change language
+function changeLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('preferredLanguage', lang);
+    
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = getTranslation(key, lang);
+        
+        // Check if element has placeholder
+        if (element.hasAttribute('placeholder')) {
+            element.setAttribute('placeholder', translation);
+        } else {
+            // Use innerHTML to preserve HTML formatting (like <br> tags)
+            element.innerHTML = translation;
+        }
+    });
+
+    // Handle lang-text elements (show/hide based on language)
+    document.querySelectorAll('.lang-text').forEach(element => {
+        const elementLang = element.getAttribute('data-lang');
+        if (elementLang === lang) {
+            element.style.display = '';
+        } else {
+            element.style.display = 'none';
+        }
+    });
+
+    // Update active language button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        }
+    });
+
+    // Update HTML lang attribute
+    document.documentElement.setAttribute('lang', lang);
+}
+
+// Language switcher event listeners
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const lang = e.currentTarget.getAttribute('data-lang');
+        changeLanguage(lang);
+    });
+});
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    changeLanguage(currentLang);
+});
