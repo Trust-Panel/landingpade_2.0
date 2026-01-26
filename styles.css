@@ -1779,16 +1779,19 @@ body {
   
   /* Navigation */
   .nav {
+    display: flex;
+    grid-template-columns: none;
     flex-direction: row;
     justify-content: space-between;
   }
   
   .nav__brand {
     order: 1;
+    justify-self: auto;
   }
   
   .nav__toggle {
-    order: 2;
+    order: 3;
     margin-left: auto;
   }
   
@@ -1859,6 +1862,8 @@ body {
     display: flex;
     align-items: center;
     height: 50px;
+    order: 2;
+    justify-self: auto;
   }
 
   .lang-btn {
