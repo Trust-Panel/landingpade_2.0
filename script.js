@@ -441,12 +441,38 @@ navToggle?.addEventListener('click', () => {
     }, 100);
 });
 
+// ===== FAQ ACCORDION =====
+function initFaqAccordion() {
+    const faqItems = document.querySelectorAll('.faq__item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq__question');
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            faqItems.forEach(other => {
+                other.classList.remove('active');
+                other.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+            });
+            
+            // Toggle clicked item
+            if (!isActive) {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+}
+
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
     staggerFeatureCards();
     initTestimonialCarousel();
     animateOnScroll();
+    initFaqAccordion();
     
     // Add loading complete class to body
     document.body.classList.add('loaded');

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="Images/favicon.jpg" type="image/jpg">
     <script src="translations.js"></script>
@@ -30,7 +30,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <div class="nav__brand">
-                <img src="Images/logo.png" alt="TrustPanel Logo">
+                <img src="Images/logo2.png" alt="TrustPanel Logo">
             </div>
 
             <div class="nav__toggle" id="nav-toggle">
@@ -47,6 +47,9 @@
                     </li>
                     <li class="nav__item">
                         <a href="#how-it-works" class="nav__link" data-i18n="nav.howItWorks">Como Funciona</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#faq" class="nav__link" data-i18n="nav.faq">FAQ</a>
                     </li>
                     <li class="nav__item">
                         <a href="#contact" class="nav__link" data-i18n="nav.contact">Contato</a>
@@ -74,7 +77,7 @@
 
     <main class="main">
         <!-- Hero Section -->
-        <section class="hero section" id="home">
+        <section class="hero" id="home">
             <div class="hero__container container grid">
                 <div class="hero__content">
                     <div class="hero__badge">
@@ -133,7 +136,7 @@
                 <div class="hero__image">
                     <div class="hero__image-container">
                         <div class="image-glow"></div>
-                        <img src="Images/dash2.jpg" alt="TrustPanel Dashboard" class="hero__img">
+                        <img src="Images/dash2.png" alt="TrustPanel Dashboard" class="hero__img">
                         <div class="hero__floating-card hero__floating-card--1">
                             <div class="floating-card__icon">
                                 <i class="fas fa-certificate"></i>
@@ -508,6 +511,86 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section class="faq section" id="faq">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">
+                        <i class="fas fa-question-circle"></i>
+                        <span data-i18n="faq.subtitle">Perguntas Frequentes</span>
+                    </span>
+                    <h2 class="section__title">
+                        <span data-i18n="faq.title">Tudo o que você precisa </span><span class="text-gradient" data-i18n="faq.titleHighlight">saber</span>
+                    </h2>
+                    <p class="section__description" data-i18n="faq.description">
+                        Tire suas dúvidas sobre o TrustPanel e como ele pode ajudar sua empresa
+                    </p>
+                </div>
+
+                <div class="faq__container">
+                    <div class="faq__item">
+                        <button class="faq__question" aria-expanded="false">
+                            <h4 data-i18n="faq.q1">O que é o TrustPanel?</h4>
+                            <span class="faq__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <p data-i18n="faq.a1">O TrustPanel é uma plataforma de gerenciamento de certificados digitais A1 que permite controlar, monitorar e organizar todos os seus certificados em um único lugar, com alertas de vencimento e controle de acesso por usuário.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <button class="faq__question" aria-expanded="false">
+                            <h4 data-i18n="faq.q2">Meus certificados ficam seguros na plataforma?</h4>
+                            <span class="faq__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <p data-i18n="faq.a2">Sim! Utilizamos criptografia AES-256, a mesma usada por bancos e instituições financeiras. Além disso, os certificados nunca são baixados na máquina do colaborador — tudo funciona na nuvem com total rastreabilidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <button class="faq__question" aria-expanded="false">
+                            <h4 data-i18n="faq.q3">Como funciona o controle de acesso?</h4>
+                            <span class="faq__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <p data-i18n="faq.a3">Você pode criar grupos de usuários (ex: Financeiro, Fiscal, Compras) e definir exatamente quais certificados cada grupo pode acessar. Cada colaborador só vê e usa o que foi autorizado pelo administrador.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <button class="faq__question" aria-expanded="false">
+                            <h4 data-i18n="faq.q4">Funciona em Windows e Mac?</h4>
+                            <span class="faq__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <p data-i18n="faq.a4">Sim! O aplicativo da TrustPanel é compatível com Windows e macOS. Basta instalar o app leve no computador do colaborador e fazer login para ter acesso aos certificados autorizados.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <button class="faq__question" aria-expanded="false">
+                            <h4 data-i18n="faq.q5">Quais são as condições especiais de lançamento?</h4>
+                            <span class="faq__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <p data-i18n="faq.a5">Estamos oferecendo condições exclusivas para empresas pioneiras que aderirem durante a fase de lançamento. Entre em contato com nossos especialistas via WhatsApp para conhecer os benefícios disponíveis.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <button class="faq__question" aria-expanded="false">
+                            <h4 data-i18n="faq.q6">A plataforma está em conformidade com a LGPD?</h4>
+                            <span class="faq__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <p data-i18n="faq.a6">Sim, o TrustPanel foi desenvolvido em total conformidade com a Lei Geral de Proteção de Dados (LGPD). Todos os dados são tratados com segurança, transparência e respeito à privacidade dos usuários.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section class="contact section" id="contact">
             <div class="container">
@@ -683,6 +766,7 @@
                     <ul class="footer__list">
                         <li><a href="#features" class="footer__link" data-i18n="footer.features">Recursos</a></li>
                         <li><a href="#how-it-works" class="footer__link" data-i18n="footer.howItWorks">Como Funciona</a></li>
+                        <li><a href="#faq" class="footer__link" data-i18n="footer.faq">FAQ</a></li>
                         <li><a href="#contact" class="footer__link" data-i18n="footer.contact">Contato</a></li>
                     </ul>
                 </div>
@@ -709,7 +793,7 @@
             </div>
 
             <div class="footer__bottom">
-                <p><span data-i18n="footer.copyright">© 2025 TrustPanel. Todos os direitos reservados. |</span>
+                <p><span data-i18n="footer.copyright">© 2026 TrustPanel. Todos os direitos reservados. |</span>
                     <a href="politica-de-privacidade.html" class="footer__link" data-i18n="footer.privacy">Política de Privacidade</a> |
                     <a href="termos-de-uso.html" class="footer__link" data-i18n="footer.terms">Termos de Uso</a>
                 </p>

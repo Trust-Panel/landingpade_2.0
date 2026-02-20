@@ -5,6 +5,7 @@ const translations = {
         'nav.home': 'Início',
         'nav.features': 'Recursos',
         'nav.howItWorks': 'Como Funciona',
+        'nav.faq': 'FAQ',
         'nav.contact': 'Contato',
 
         // Hero Section
@@ -148,6 +149,7 @@ const translations = {
         'footer.support': 'Suporte',
         'footer.features': 'Recursos',
         'footer.howItWorks': 'Como Funciona',
+        'footer.faq': 'FAQ',
         'footer.contact': 'Contato',
         'footer.about': 'Sobre',
         'footer.blog': 'Blog',
@@ -159,6 +161,24 @@ const translations = {
         'footer.copyright': '© 2025 TrustPanel. Todos os direitos reservados. |',
         'footer.privacy': 'Política de Privacidade',
         'footer.terms': 'Termos de Uso',
+
+        // FAQ Section
+        'faq.subtitle': 'Perguntas Frequentes',
+        'faq.title': 'Tudo o que você precisa ',
+        'faq.titleHighlight': 'saber',
+        'faq.description': 'Tire suas dúvidas sobre o TrustPanel e como ele pode ajudar sua empresa',
+        'faq.q1': 'O que é o TrustPanel?',
+        'faq.a1': 'O TrustPanel é uma plataforma de gerenciamento de certificados digitais A1 que permite controlar, monitorar e organizar todos os seus certificados em um único lugar, com alertas de vencimento e controle de acesso por usuário.',
+        'faq.q2': 'Meus certificados ficam seguros na plataforma?',
+        'faq.a2': 'Sim! Utilizamos criptografia AES-256, a mesma usada por bancos e instituições financeiras. Além disso, os certificados nunca são baixados na máquina do colaborador — tudo funciona na nuvem com total rastreabilidade.',
+        'faq.q3': 'Como funciona o controle de acesso?',
+        'faq.a3': 'Você pode criar grupos de usuários (ex: Financeiro, Fiscal, Compras) e definir exatamente quais certificados cada grupo pode acessar. Cada colaborador só vê e usa o que foi autorizado pelo administrador.',
+        'faq.q4': 'Funciona em Windows e Mac?',
+        'faq.a4': 'Sim! O aplicativo da TrustPanel é compatível com Windows e macOS. Basta instalar o app leve no computador do colaborador e fazer login para ter acesso aos certificados autorizados.',
+        'faq.q5': 'Quais são as condições especiais de lançamento?',
+        'faq.a5': 'Estamos oferecendo condições exclusivas para empresas pioneiras que aderirem durante a fase de lançamento. Entre em contato com nossos especialistas via WhatsApp para conhecer os benefícios disponíveis.',
+        'faq.q6': 'A plataforma está em conformidade com a LGPD?',
+        'faq.a6': 'Sim, o TrustPanel foi desenvolvido em total conformidade com a Lei Geral de Proteção de Dados (LGPD). Todos os dados são tratados com segurança, transparência e respeito à privacidade dos usuários.',
     },
 
     'en': {
@@ -166,6 +186,7 @@ const translations = {
         'nav.home': 'Home',
         'nav.features': 'Features',
         'nav.howItWorks': 'How It Works',
+        'nav.faq': 'FAQ',
         'nav.contact': 'Contact',
 
         // Hero Section
@@ -309,6 +330,7 @@ const translations = {
         'footer.support': 'Support',
         'footer.features': 'Features',
         'footer.howItWorks': 'How It Works',
+        'footer.faq': 'FAQ',
         'footer.contact': 'Contact',
         'footer.about': 'About',
         'footer.blog': 'Blog',
@@ -320,6 +342,24 @@ const translations = {
         'footer.copyright': '© 2025 TrustPanel. All rights reserved. |',
         'footer.privacy': 'Privacy Policy',
         'footer.terms': 'Terms of Use',
+
+        // FAQ Section
+        'faq.subtitle': 'Frequently Asked Questions',
+        'faq.title': 'Everything you need to ',
+        'faq.titleHighlight': 'know',
+        'faq.description': 'Get answers about TrustPanel and how it can help your company',
+        'faq.q1': 'What is TrustPanel?',
+        'faq.a1': 'TrustPanel is an A1 digital certificate management platform that allows you to control, monitor, and organize all your certificates in one place, with expiration alerts and user-based access control.',
+        'faq.q2': 'Are my certificates secure on the platform?',
+        'faq.a2': 'Yes! We use AES-256 encryption, the same used by banks and financial institutions. Additionally, certificates are never downloaded to the employee\'s machine — everything runs in the cloud with full traceability.',
+        'faq.q3': 'How does access control work?',
+        'faq.a3': 'You can create user groups (e.g., Finance, Tax, Purchasing) and define exactly which certificates each group can access. Each employee only sees and uses what has been authorized by the administrator.',
+        'faq.q4': 'Does it work on Windows and Mac?',
+        'faq.a4': 'Yes! The TrustPanel app is compatible with Windows and macOS. Simply install the lightweight app on the employee\'s computer and log in to access authorized certificates.',
+        'faq.q5': 'What are the special launch conditions?',
+        'faq.a5': 'We are offering exclusive conditions for pioneer companies that join during the launch phase. Contact our specialists via WhatsApp to learn about the available benefits.',
+        'faq.q6': 'Is the platform LGPD compliant?',
+        'faq.a6': 'Yes, TrustPanel was developed in full compliance with the General Data Protection Law (LGPD). All data is handled with security, transparency, and respect for user privacy.',
     },
 
     'es': {
@@ -327,6 +367,7 @@ const translations = {
         'nav.home': 'Inicio',
         'nav.features': 'Características',
         'nav.howItWorks': 'Cómo Funciona',
+        'nav.faq': 'FAQ',
         'nav.contact': 'Contacto',
 
         // Hero Section
@@ -470,6 +511,7 @@ const translations = {
         'footer.support': 'Soporte',
         'footer.features': 'Características',
         'footer.howItWorks': 'Cómo Funciona',
+        'footer.faq': 'FAQ',
         'footer.contact': 'Contacto',
         'footer.about': 'Acerca de',
         'footer.blog': 'Blog',
@@ -481,6 +523,24 @@ const translations = {
         'footer.copyright': '© 2025 TrustPanel. Todos los derechos reservados. |',
         'footer.privacy': 'Política de Privacidad',
         'footer.terms': 'Términos de Uso',
+
+        // FAQ Section
+        'faq.subtitle': 'Preguntas Frecuentes',
+        'faq.title': 'Todo lo que necesitas ',
+        'faq.titleHighlight': 'saber',
+        'faq.description': 'Resuelve tus dudas sobre TrustPanel y cómo puede ayudar a tu empresa',
+        'faq.q1': '¿Qué es TrustPanel?',
+        'faq.a1': 'TrustPanel es una plataforma de gestión de certificados digitales A1 que permite controlar, monitorear y organizar todos tus certificados en un solo lugar, con alertas de vencimiento y control de acceso por usuario.',
+        'faq.q2': '¿Mis certificados están seguros en la plataforma?',
+        'faq.a2': '¡Sí! Utilizamos encriptación AES-256, la misma utilizada por bancos e instituciones financieras. Además, los certificados nunca se descargan en la máquina del colaborador — todo funciona en la nube con total trazabilidad.',
+        'faq.q3': '¿Cómo funciona el control de acceso?',
+        'faq.a3': 'Puedes crear grupos de usuarios (ej: Financiero, Fiscal, Compras) y definir exactamente qué certificados puede acceder cada grupo. Cada colaborador solo ve y usa lo que ha sido autorizado por el administrador.',
+        'faq.q4': '¿Funciona en Windows y Mac?',
+        'faq.a4': '¡Sí! La aplicación de TrustPanel es compatible con Windows y macOS. Simplemente instala la app ligera en la computadora del colaborador e inicia sesión para acceder a los certificados autorizados.',
+        'faq.q5': '¿Cuáles son las condiciones especiales de lanzamiento?',
+        'faq.a5': 'Estamos ofreciendo condiciones exclusivas para empresas pioneras que se unan durante la fase de lanzamiento. Contacta a nuestros especialistas vía WhatsApp para conocer los beneficios disponibles.',
+        'faq.q6': '¿La plataforma cumple con la LGPD?',
+        'faq.a6': 'Sí, TrustPanel fue desarrollado en total conformidad con la Ley General de Protección de Datos (LGPD). Todos los datos son tratados con seguridad, transparencia y respeto a la privacidad de los usuarios.',
     }
 };
 
