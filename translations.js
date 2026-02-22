@@ -102,7 +102,7 @@ const translations = {
         'security.title': 'Segurança Garantida',
         'security.description': 'O colaborador <strong>nunca baixa o certificado</strong> na máquina dele. Tudo fica protegido em nossa nuvem, garantindo que certificados não sejam espalhados ou usados incorretamente',
         'security.feature1': 'Sem downloads locais',
-        'security.feature2': 'Rastreabilidade total',
+        'security.feature2': 'Controle de sessão dos certificados',
         'security.feature3': 'Log de todas as ações',
 
         // Contact Section
@@ -283,7 +283,7 @@ const translations = {
         'security.title': 'Guaranteed Security',
         'security.description': 'The collaborator <strong>never downloads the certificate</strong> on their machine. Everything is protected in our cloud, ensuring that certificates are not spread or used incorrectly',
         'security.feature1': 'No local downloads',
-        'security.feature2': 'Full traceability',
+        'security.feature2': 'Certificate session control',
         'security.feature3': 'Log of all actions',
 
         // Contact Section
@@ -464,7 +464,7 @@ const translations = {
         'security.title': 'Seguridad Garantizada',
         'security.description': 'El colaborador <strong>nunca descarga el certificado</strong> en su máquina. Todo queda protegido en nuestra nube, garantizando que los certificados no se esparzan o usen incorrectamente',
         'security.feature1': 'Sin descargas locales',
-        'security.feature2': 'Trazabilidad total',
+        'security.feature2': 'Control de sesión de certificados',
         'security.feature3': 'Registro de todas las acciones',
 
         // Contact Section
