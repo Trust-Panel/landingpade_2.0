@@ -13,8 +13,8 @@ const translations = {
         'hero.title': 'Pare de perder dinheiro com ',
         'hero.titleHighlight': 'Certificados Vencidos',
         'hero.description': 'Automatize 100% da gestão dos seus certificados digitais. Receba alertas antes do vencimento e evite multas e bloqueios operacionais.',
-        'hero.launchTitle': 'Lançamento 1º Trimestre 2026',
-        'hero.launchText': 'Condições Exclusivas para Pioneiros',
+        'hero.launchTitle': 'Plataforma Disponível',
+        'hero.launchText': 'Comece a proteger seus certificados agora',
         'hero.btnPrimary': 'Falar com Especialista',
         
         // Trust Badges
@@ -29,13 +29,14 @@ const translations = {
         'float.expires': 'Vence em 30 dias',
 
         // Stats Bar
-        'stats.launch': 'Lançamento',
-        'stats.launchText': 'Em Fase Beta',
-        'stats.focus': 'Foco no Cliente',
-        'stats.exclusive': 'Exclusivo',
-        'stats.exclusiveText': 'Condições Especiais',
-        'stats.pioneers': 'Pioneiros',
-        'stats.pioneersText': 'Seja um dos Primeiros',
+        'stats.secureCerts': 'Certificados',
+        'stats.secureCertsText': 'Seguros e Protegidos',
+        'stats.centralMgmt': 'Gestão',
+        'stats.centralMgmtText': 'Centralizada',
+        'stats.alerts': 'Alertas',
+        'stats.alertsText': 'De Vencimento',
+        'stats.logs': 'Logs',
+        'stats.logsText': 'Restrição de Acesso',
 
         // Features Section
         'features.subtitle': 'Recursos Principais',
@@ -66,10 +67,18 @@ const translations = {
         'feature3.list3': 'Log completo de atividades',
         'feature3.link': 'Saiba mais',
 
+        // Feature 4 - Logs
+        'feature4.title': 'Logs completos e restrição de acesso',
+        'feature4.description': 'Tenha visibilidade total sobre todas as ações realizadas na plataforma. Saiba quem acessou, quando e o que fez com cada certificado.',
+        'feature4.list1': 'Registro detalhado de todas as ações',
+        'feature4.list2': 'Restrição de acesso por IP e horário',
+        'feature4.list3': 'Auditoria completa para conformidade',
+        'feature4.link': 'Saiba mais',
+
         // Features CTA
-        'featuresCta.title': 'Seja um dos primeiros a transformar sua gestão de certificados',
-        'featuresCta.description': 'Vagas limitadas para empresas pioneiras com condições especiais de lançamento',
-        'featuresCta.btn': 'Garantir Minha Vaga',
+        'featuresCta.title': 'Pronto para simplificar a gestão dos seus certificados?',
+        'featuresCta.description': 'Fale com nosso time e descubra como o TrustPanel pode automatizar e proteger seus certificados digitais',
+        'featuresCta.btn': 'Quero Conhecer o TrustPanel',
 
         // How It Works Section
         'howItWorks.subtitle': 'Como Funciona',
@@ -175,8 +184,6 @@ const translations = {
         'faq.a3': 'Você pode criar grupos de usuários (ex: Financeiro, Fiscal, Compras) e definir exatamente quais certificados cada grupo pode acessar. Cada colaborador só vê e usa o que foi autorizado pelo administrador.',
         'faq.q4': 'Funciona em Windows e Mac?',
         'faq.a4': 'Sim! O aplicativo da TrustPanel é compatível com Windows e macOS. Basta instalar o app leve no computador do colaborador e fazer login para ter acesso aos certificados autorizados.',
-        'faq.q5': 'Quais são as condições especiais de lançamento?',
-        'faq.a5': 'Estamos oferecendo condições exclusivas para empresas pioneiras que aderirem durante a fase de lançamento. Entre em contato com nossos especialistas via WhatsApp para conhecer os benefícios disponíveis.',
         'faq.q6': 'A plataforma está em conformidade com a LGPD?',
         'faq.a6': 'Sim, o TrustPanel foi desenvolvido em total conformidade com a Lei Geral de Proteção de Dados (LGPD). Todos os dados são tratados com segurança, transparência e respeito à privacidade dos usuários.',
     },
@@ -194,8 +201,8 @@ const translations = {
         'hero.title': 'Stop losing money with ',
         'hero.titleHighlight': 'Expired Certificates',
         'hero.description': 'Automate 100% of your digital certificate management. Receive alerts before expiration and avoid fines and operational blocks.',
-        'hero.launchTitle': 'Launch 1st Quarter 2026',
-        'hero.launchText': 'Exclusive Conditions for Pioneers',
+        'hero.launchTitle': 'Platform Available',
+        'hero.launchText': 'Start protecting your certificates now',
         'hero.btnPrimary': 'Talk to a Specialist',
         
         // Trust Badges
@@ -210,13 +217,14 @@ const translations = {
         'float.expires': 'Expires in 30 days',
 
         // Stats Bar
-        'stats.launch': 'Launch',
-        'stats.launchText': 'In Beta Phase',
-        'stats.focus': 'Customer Focus',
-        'stats.exclusive': 'Exclusive',
-        'stats.exclusiveText': 'Special Conditions',
-        'stats.pioneers': 'Pioneers',
-        'stats.pioneersText': 'Be One of the First',
+        'stats.secureCerts': 'Certificates',
+        'stats.secureCertsText': 'Secure & Protected',
+        'stats.centralMgmt': 'Management',
+        'stats.centralMgmtText': 'Centralized',
+        'stats.alerts': 'Alerts',
+        'stats.alertsText': 'Expiration Warnings',
+        'stats.logs': 'Logs',
+        'stats.logsText': 'Access Restriction',
 
         // Features Section
         'features.subtitle': 'Main Features',
@@ -247,10 +255,18 @@ const translations = {
         'feature3.list3': 'Complete activity log',
         'feature3.link': 'Learn more',
 
+        // Feature 4 - Logs
+        'feature4.title': 'Complete logs and access restriction',
+        'feature4.description': 'Have full visibility over all actions performed on the platform. Know who accessed, when, and what they did with each certificate.',
+        'feature4.list1': 'Detailed record of all actions',
+        'feature4.list2': 'Access restriction by IP and schedule',
+        'feature4.list3': 'Complete audit for compliance',
+        'feature4.link': 'Learn more',
+
         // Features CTA
-        'featuresCta.title': 'Be one of the first to transform your certificate management',
-        'featuresCta.description': 'Limited spots for pioneer companies with special launch conditions',
-        'featuresCta.btn': 'Secure My Spot',
+        'featuresCta.title': 'Ready to simplify your certificate management?',
+        'featuresCta.description': 'Talk to our team and discover how TrustPanel can automate and protect your digital certificates',
+        'featuresCta.btn': 'I Want to Know TrustPanel',
 
         // How It Works Section
         'howItWorks.subtitle': 'How It Works',
@@ -356,8 +372,6 @@ const translations = {
         'faq.a3': 'You can create user groups (e.g., Finance, Tax, Purchasing) and define exactly which certificates each group can access. Each employee only sees and uses what has been authorized by the administrator.',
         'faq.q4': 'Does it work on Windows and Mac?',
         'faq.a4': 'Yes! The TrustPanel app is compatible with Windows and macOS. Simply install the lightweight app on the employee\'s computer and log in to access authorized certificates.',
-        'faq.q5': 'What are the special launch conditions?',
-        'faq.a5': 'We are offering exclusive conditions for pioneer companies that join during the launch phase. Contact our specialists via WhatsApp to learn about the available benefits.',
         'faq.q6': 'Is the platform LGPD compliant?',
         'faq.a6': 'Yes, TrustPanel was developed in full compliance with the General Data Protection Law (LGPD). All data is handled with security, transparency, and respect for user privacy.',
     },
@@ -375,8 +389,8 @@ const translations = {
         'hero.title': 'Deja de perder dinero con ',
         'hero.titleHighlight': 'Certificados Vencidos',
         'hero.description': 'Automatiza el 100% de la gestión de tus certificados digitales. Recibe alertas antes del vencimiento y evita multas y bloqueos operacionales.',
-        'hero.launchTitle': 'Lanzamiento 1er Trimestre 2026',
-        'hero.launchText': 'Condiciones Exclusivas para Pioneros',
+        'hero.launchTitle': 'Plataforma Disponible',
+        'hero.launchText': 'Comience a proteger sus certificados ahora',
         'hero.btnPrimary': 'Hablar con Especialista',
         
         // Trust Badges
@@ -391,13 +405,14 @@ const translations = {
         'float.expires': 'Vence en 30 días',
 
         // Stats Bar
-        'stats.launch': 'Lanzamiento',
-        'stats.launchText': 'En Fase Beta',
-        'stats.focus': 'Enfoque en el Cliente',
-        'stats.exclusive': 'Exclusivo',
-        'stats.exclusiveText': 'Condiciones Especiales',
-        'stats.pioneers': 'Pioneros',
-        'stats.pioneersText': 'Sea uno de los Primeros',
+        'stats.secureCerts': 'Certificados',
+        'stats.secureCertsText': 'Seguros y Protegidos',
+        'stats.centralMgmt': 'Gestión',
+        'stats.centralMgmtText': 'Centralizada',
+        'stats.alerts': 'Alertas',
+        'stats.alertsText': 'De Vencimiento',
+        'stats.logs': 'Logs',
+        'stats.logsText': 'Restricción de Acceso',
 
         // Features Section
         'features.subtitle': 'Características Principales',
@@ -428,10 +443,18 @@ const translations = {
         'feature3.list3': 'Registro completo de actividades',
         'feature3.link': 'Saber más',
 
+        // Feature 4 - Logs
+        'feature4.title': 'Registros completos y restricción de acceso',
+        'feature4.description': 'Tenga visibilidad total sobre todas las acciones realizadas en la plataforma. Sepa quién accedió, cuándo y qué hizo con cada certificado.',
+        'feature4.list1': 'Registro detallado de todas las acciones',
+        'feature4.list2': 'Restricción de acceso por IP y horario',
+        'feature4.list3': 'Auditoría completa para cumplimiento',
+        'feature4.link': 'Saber más',
+
         // Features CTA
-        'featuresCta.title': 'Sea uno de los primeros en transformar su gestión de certificados',
-        'featuresCta.description': 'Plazas limitadas para empresas pioneras con condiciones especiales de lanzamiento',
-        'featuresCta.btn': 'Asegurar Mi Plaza',
+        'featuresCta.title': '¿Listo para simplificar la gestión de sus certificados?',
+        'featuresCta.description': 'Hable con nuestro equipo y descubra cómo TrustPanel puede automatizar y proteger sus certificados digitales',
+        'featuresCta.btn': 'Quiero Conocer TrustPanel',
 
         // How It Works Section
         'howItWorks.subtitle': 'Cómo Funciona',
@@ -537,8 +560,6 @@ const translations = {
         'faq.a3': 'Puedes crear grupos de usuarios (ej: Financiero, Fiscal, Compras) y definir exactamente qué certificados puede acceder cada grupo. Cada colaborador solo ve y usa lo que ha sido autorizado por el administrador.',
         'faq.q4': '¿Funciona en Windows y Mac?',
         'faq.a4': '¡Sí! La aplicación de TrustPanel es compatible con Windows y macOS. Simplemente instala la app ligera en la computadora del colaborador e inicia sesión para acceder a los certificados autorizados.',
-        'faq.q5': '¿Cuáles son las condiciones especiales de lanzamiento?',
-        'faq.a5': 'Estamos ofreciendo condiciones exclusivas para empresas pioneras que se unan durante la fase de lanzamiento. Contacta a nuestros especialistas vía WhatsApp para conocer los beneficios disponibles.',
         'faq.q6': '¿La plataforma cumple con la LGPD?',
         'faq.a6': 'Sí, TrustPanel fue desarrollado en total conformidad con la Ley General de Protección de Datos (LGPD). Todos los datos son tratados con seguridad, transparencia y respeto a la privacidad de los usuarios.',
     }

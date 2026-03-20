@@ -889,7 +889,13 @@ ul, ol {
 }
 
 .features__grid--three {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features__grid--two {
+  grid-template-columns: repeat(2, 1fr);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -2130,7 +2136,8 @@ ul, ol {
   
   /* Features */
   .features__grid,
-  .features__grid--three {
+  .features__grid--three,
+  .features__grid--two {
     grid-template-columns: 1fr;
   }
   
