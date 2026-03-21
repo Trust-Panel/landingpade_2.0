@@ -781,7 +781,7 @@ ul, ol {
 
 .stats-bar__content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0;
   padding: 0;
 }
@@ -1919,6 +1919,10 @@ ul, ol {
   .stats-bar__content .stat-item:nth-last-child(-n+2) {
     border-bottom: none;
   }
+
+  .stats-bar__content .stat-item:last-child {
+    border-right: none;
+  }
   
   .contact__wrapper {
     grid-template-columns: 1fr;
@@ -2156,7 +2160,9 @@ ul, ol {
   }
   
   .cta-card .btn {
-    width: 100%;
+    width: auto;
+    font-size: 0.9rem;
+    padding: var(--spacing-md) var(--spacing-xl);
   }
   
   /* How It Works - Mobile */

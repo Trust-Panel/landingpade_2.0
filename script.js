@@ -166,6 +166,10 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
+        // Honeypot check
+        const honeypot = contactForm.querySelector('input[name="website"]');
+        if (honeypot && honeypot.value) return;
+        
         // Get form data
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
@@ -211,15 +215,25 @@ function showNotification(message, type = 'info') {
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification--${type}`;
-    notification.innerHTML = `
-        <div class="notification__content">
-            <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
-            <span>${message}</span>
-        </div>
-        <button class="notification__close">
-            <i class="fas fa-times"></i>
-        </button>
-    `;
+    
+    // Build content safely without innerHTML
+    const content = document.createElement('div');
+    content.className = 'notification__content';
+    const icon = document.createElement('i');
+    icon.className = `fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}`;
+    const span = document.createElement('span');
+    span.textContent = message;
+    content.appendChild(icon);
+    content.appendChild(span);
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'notification__close';
+    const closeIcon = document.createElement('i');
+    closeIcon.className = 'fas fa-times';
+    closeBtn.appendChild(closeIcon);
+    
+    notification.appendChild(content);
+    notification.appendChild(closeBtn);
     
     // Add styles
     notification.style.cssText = `
@@ -243,7 +257,6 @@ function showNotification(message, type = 'info') {
     document.body.appendChild(notification);
     
     // Close button functionality
-    const closeBtn = notification.querySelector('.notification__close');
     closeBtn.addEventListener('click', () => {
         notification.style.animation = 'slideOutRight 0.3s ease-out';
         setTimeout(() => notification.remove(), 300);

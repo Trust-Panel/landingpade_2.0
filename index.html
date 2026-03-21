@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="TrustPanel - Gerenciamento inteligente de certificados digitais A1. Simplifique sua gestão de certificados com nossa plataforma.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://trustpanel.com.br/">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="pt-BR" href="https://trustpanel.com.br/">
+    <link rel="alternate" hreflang="en" href="https://trustpanel.com.br/">
+    <link rel="alternate" hreflang="es" href="https://trustpanel.com.br/">
+    <link rel="alternate" hreflang="x-default" href="https://trustpanel.com.br/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trustpanel.com.br/">
+    <meta property="og:title" content="TrustPanel - Gerenciamento de Certificados Digitais A1">
+    <meta property="og:description" content="Automatize 100% da gestão dos seus certificados digitais. Receba alertas antes do vencimento e evite multas e bloqueios operacionais.">
+    <meta property="og:image" content="https://trustpanel.com.br/Images/dash2.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="TrustPanel">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TrustPanel - Gerenciamento de Certificados Digitais A1">
+    <meta name="twitter:description" content="Automatize 100% da gestão dos seus certificados digitais. Receba alertas antes do vencimento e evite multas e bloqueios operacionais.">
+    <meta name="twitter:image" content="https://trustpanel.com.br/Images/dash2.png">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE9H1PB1BD"></script>
@@ -22,7 +47,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="Images/favicon.jpg" type="image/jpg">
-    <script src="translations.js"></script>
+    <script src="translations.js" defer></script>
 </head>
 
 <body>
@@ -30,10 +55,10 @@
     <header class="header" id="header">
         <nav class="nav container">
             <div class="nav__brand">
-                <img src="Images/logo2.png" alt="TrustPanel Logo">
+                <img src="Images/logo2.png" alt="TrustPanel - Gerenciamento de Certificados Digitais" width="180" height="40">
             </div>
 
-            <div class="nav__toggle" id="nav-toggle">
+            <div class="nav__toggle" id="nav-toggle" aria-label="Abrir menu de navegação">
                 <i class="fas fa-bars"></i>
             </div>
 
@@ -55,7 +80,7 @@
                         <a href="#contact" class="nav__link" data-i18n="nav.contact">Contato</a>
                     </li>
                 </ul>
-                <div class="nav__close" id="nav-close">
+                <div class="nav__close" id="nav-close" aria-label="Fechar menu de navegação">
                     <i class="fas fa-times"></i>
                 </div>
             </div>
@@ -111,7 +136,7 @@
                     </div>
 
                     <div class="hero__actions">
-                        <a href="https://wa.me/5566992623898" class="btn btn--primary btn--large btn--pulse">
+                        <a href="https://wa.me/5566992623898" class="btn btn--primary btn--large btn--pulse" rel="noopener noreferrer" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             <span data-i18n="hero.btnPrimary">Falar com Especialista</span>
                         </a>
@@ -136,7 +161,7 @@
                 <div class="hero__image">
                     <div class="hero__image-container">
                         <div class="image-glow"></div>
-                        <img src="Images/dash2.png" alt="TrustPanel Dashboard" class="hero__img">
+                        <img src="Images/dash2.png" alt="Painel TrustPanel mostrando gestão centralizada de certificados digitais" class="hero__img" width="600" height="400">
                         <div class="hero__floating-card hero__floating-card--1">
                             <div class="floating-card__icon">
                                 <i class="fas fa-certificate"></i>
@@ -195,11 +220,20 @@
                         </div>
                         <div class="stat-item">
                             <div class="stat-icon">
-                                <i class="fas fa-lock"></i>
+                                <i class="fas fa-clipboard-list"></i>
                             </div>
                             <div class="stat-info">
                                 <span class="stat-number" data-i18n="stats.logs">Logs</span>
-                                <span class="stat-text" data-i18n="stats.logsText">Restrição de Acesso</span>
+                                <span class="stat-text" data-i18n="stats.logsText">Registro de Uso</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number" data-i18n="stats.access">Restrição</span>
+                                <span class="stat-text" data-i18n="stats.accessText">De Acesso</span>
                             </div>
                         </div>
                     </div>
@@ -262,7 +296,7 @@
                                 <span data-i18n="feature1.list3">Dashboard com visão de vencimentos</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5566992623898" class="feature__link">
+                        <a href="https://wa.me/5566992623898" class="feature__link" rel="noopener noreferrer" target="_blank">
                             <span data-i18n="feature1.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -271,40 +305,39 @@
                     <div class="feature__card" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature__icon-wrapper">
                             <div class="feature__icon">
-                                <i class="fas fa-shield-alt"></i>
+                                <i class="fas fa-cloud-upload-alt"></i>
                             </div>
                             <div class="feature__icon-bg"></div>
                         </div>
                         <h3 class="feature__title">
-                            <span class="lang-text" data-lang="pt-BR">Armazenamento seguro e organizado dos certificados</span>
-                            <span class="lang-text" data-lang="en" style="display:none;">Secure and organized certificate storage</span>
-                            <span class="lang-text" data-lang="es" style="display:none;">Almacenamiento seguro y organizado de certificados</span>
+                            <span class="lang-text" data-lang="pt-BR">Uso seguro sem armazenamento local</span>
+                            <span class="lang-text" data-lang="en" style="display:none;">Secure usage without local storage</span>
+                            <span class="lang-text" data-lang="es" style="display:none;">Uso seguro sin almacenamiento local</span>
                         </h3>
                         <p class="feature__description" data-i18n="feature2.description">
-                            Mantenha todos os seus certificados digitais em um local seguro, com criptografia de ponta e
-                            organização inteligente.
+                            O certificado nunca é baixado na máquina do colaborador. O uso acontece de forma segura diretamente pela plataforma, sem risco de cópias ou vazamentos.
                         </p>
                         <ul class="feature__list">
                             <li>
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span data-i18n="feature2.list1">Criptografia AES-256 bit</span>
+                                <span data-i18n="feature2.list1">Certificado nunca fica na máquina local</span>
                             </li>
                             <li>
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span data-i18n="feature2.list2">Backup automático e redundante</span>
+                                <span data-i18n="feature2.list2">Uso seguro direto pela plataforma</span>
                             </li>
                             <li>
                                 <div class="list-icon">
                                     <i class="fas fa-check"></i>
                                 </div>
-                                <span data-i18n="feature2.list3">Organização por categorias e tags</span>
+                                <span data-i18n="feature2.list3">Sem risco de cópias ou vazamentos</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5566992623898" class="feature__link">
+                        <a href="https://wa.me/5566992623898" class="feature__link" rel="noopener noreferrer" target="_blank">
                             <span data-i18n="feature2.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -346,7 +379,7 @@
                                 <span data-i18n="feature3.list3">Log completo de atividades</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5566992623898" class="feature__link">
+                        <a href="https://wa.me/5566992623898" class="feature__link" rel="noopener noreferrer" target="_blank">
                             <span data-i18n="feature3.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -387,7 +420,7 @@
                                 <span data-i18n="feature4.list3">Auditoria completa para conformidade</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5566992623898" class="feature__link">
+                        <a href="https://wa.me/5566992623898" class="feature__link" rel="noopener noreferrer" target="_blank">
                             <span data-i18n="feature4.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -401,7 +434,7 @@
                             <h3 data-i18n="featuresCta.title">Pronto para simplificar a gestão dos seus certificados?</h3>
                             <p data-i18n="featuresCta.description">Fale com nosso time e descubra como o TrustPanel pode automatizar e proteger seus certificados digitais</p>
                         </div>
-                        <a href="https://wa.me/5566992623898" class="btn btn--primary btn--large">
+                        <a href="https://wa.me/5566992623898" class="btn btn--primary btn--large" rel="noopener noreferrer" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             <span data-i18n="featuresCta.btn">Quero Conhecer o TrustPanel</span>
                         </a>
@@ -458,7 +491,7 @@
                         <div class="step__content">
                             <h3 class="step__title" data-i18n="step2.title">Cadastro de Certificados</h3>
                             <p class="step__description" data-i18n="step2.description">
-                                O administrador envia os certificados digitais para nossa plataforma. Armazenamento seguro com criptografia AES-256
+                                O administrador envia os certificados digitais para nossa plataforma. Processamento seguro com criptografia AES-256
                             </p>
                             <div class="step__badge">
                                 <i class="fas fa-lock"></i>
@@ -541,7 +574,7 @@
                         </div>
                         <div class="security-feature">
                             <i class="fas fa-eye"></i>
-                            <span data-i18n="security.feature2">Controle de sessão dos certificados</span>
+                            <span data-i18n="security.feature2">Controle de registro de uso dos certificados</span>
                         </div>
                         <div class="security-feature">
                             <i class="fas fa-history"></i>
@@ -611,11 +644,11 @@
 
                     <div class="faq__item">
                         <button class="faq__question" aria-expanded="false">
-                            <h4 data-i18n="faq.q6">A plataforma está em conformidade com a LGPD?</h4>
+                            <h4 data-i18n="faq.q5">A plataforma está em conformidade com a LGPD?</h4>
                             <span class="faq__icon"><i class="fas fa-plus"></i></span>
                         </button>
                         <div class="faq__answer">
-                            <p data-i18n="faq.a6">Sim, o TrustPanel foi desenvolvido em total conformidade com a Lei Geral de Proteção de Dados (LGPD). Todos os dados são tratados com segurança, transparência e respeito à privacidade dos usuários.</p>
+                            <p data-i18n="faq.a5">Sim, o TrustPanel foi desenvolvido em total conformidade com a Lei Geral de Proteção de Dados (LGPD). Todos os dados são tratados com segurança, transparência e respeito à privacidade dos usuários.</p>
                         </div>
                     </div>
                 </div>
@@ -650,8 +683,19 @@
                                 </div>
                                 <div class="info-card__content">
                                     <h4 data-i18n="contactInfo.email">Email</h4>
-                                    <a href="mailto:trustpanel@outlook.com">trustpanel@outlook.com</a>
+                                    <a href="mailto:comercial@trustpanel.com.br">comercial@trustpanel.com.br</a>
                                     <span class="info-card__meta" data-i18n="contactInfo.emailMeta">Resposta em até 2h</span>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-card__icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="info-card__content">
+                                    <h4 data-i18n="contactInfo.whatsapp">WhatsApp</h4>
+                                    <a href="https://wa.me/5566992623898" rel="noopener noreferrer" target="_blank">(66) 99262-3898</a>
+                                    <span class="info-card__meta" data-i18n="contactInfo.whatsappMeta">Atendimento rápido</span>
                                 </div>
                             </div>
 
@@ -687,6 +731,11 @@
                         </div>
 
                         <form class="contact__form" id="contact-form">
+                            <!-- Honeypot anti-spam -->
+                            <div class="form__group" style="position:absolute;left:-9999px;" aria-hidden="true">
+                                <label for="website">Website</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
                             <div class="form__row">
                                 <div class="form__group">
                                     <label for="name" class="form__label">
@@ -774,19 +823,16 @@
             <div class="footer__container grid">
                 <div class="footer__content">
                     <div class="footer__brand">
-                        <img src="Images/logo2.png" alt="TrustPanel Logo">
+                        <img src="Images/logo2.png" alt="TrustPanel - Gerenciamento de Certificados Digitais" width="180" height="40">
                     </div>
                     <p class="footer__description" data-i18n="footer.description">
                         A plataforma mais confiável para gerenciamento de certificados digitais A1.
                     </p>
                     <div class="footer__social">
-                        <a href="https://www.linkedin.com/company/trustpanel" class="footer__social-link">
+                        <a href="https://www.linkedin.com/company/trustpanel" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn do TrustPanel">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" class="footer__social-link">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/trust.panel/" class="footer__social-link">
+                        <a href="https://www.instagram.com/trust.panel/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram do TrustPanel">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -803,22 +849,11 @@
                 </div>
 
                 <div class="footer__links">
-                    <h4 class="footer__title" data-i18n="footer.company">Empresa</h4>
-                    <ul class="footer__list">
-                        <li><a href="#" class="footer__link" data-i18n="footer.about">Sobre</a></li>
-                        <li><a href="#" class="footer__link" data-i18n="footer.blog">Blog</a></li>
-                        <li><a href="#" class="footer__link" data-i18n="footer.careers">Carreiras</a></li>
-                        <li><a href="#" class="footer__link" data-i18n="footer.press">Imprensa</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__links">
                     <h4 class="footer__title" data-i18n="footer.support">Suporte</h4>
                     <ul class="footer__list">
-                        <li><a href="#" class="footer__link" data-i18n="footer.helpCenter">Central de Ajuda</a></li>
                         <li><a href="#contact" class="footer__link" data-i18n="footer.contact">Contato</a></li>
-                        <li><a href="#" class="footer__link" data-i18n="footer.status">Status</a></li>
-                        <li><a href="#" class="footer__link" data-i18n="footer.documentation">Documentação</a></li>
+                        <li><a href="politica-de-privacidade.html" class="footer__link" data-i18n="footer.privacy">Política de Privacidade</a></li>
+                        <li><a href="termos-de-uso.html" class="footer__link" data-i18n="footer.terms">Termos de Uso</a></li>
                     </ul>
                 </div>
             </div>

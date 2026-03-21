@@ -36,7 +36,9 @@ const translations = {
         'stats.alerts': 'Alertas',
         'stats.alertsText': 'De Vencimento',
         'stats.logs': 'Logs',
-        'stats.logsText': 'Restrição de Acesso',
+        'stats.logsText': 'Registro de Uso',
+        'stats.access': 'Restrição',
+        'stats.accessText': 'De Acesso',
 
         // Features Section
         'features.subtitle': 'Recursos Principais',
@@ -53,11 +55,11 @@ const translations = {
         'feature1.list3': 'Dashboard com visão de vencimentos',
         'feature1.link': 'Saiba mais',
 
-        'feature2.title': 'Armazenamento seguro e organizado dos certificados',
-        'feature2.description': 'Mantenha todos os seus certificados digitais em um local seguro, com criptografia de ponta e organização inteligente.',
-        'feature2.list1': 'Criptografia AES-256 bit',
-        'feature2.list2': 'Backup automático e redundante',
-        'feature2.list3': 'Organização por categorias e tags',
+        'feature2.title': 'Uso seguro sem armazenamento local',
+        'feature2.description': 'O certificado nunca é baixado na máquina do colaborador. O uso acontece de forma segura diretamente pela plataforma, sem risco de cópias ou vazamentos.',
+        'feature2.list1': 'Certificado nunca fica na máquina local',
+        'feature2.list2': 'Uso seguro direto pela plataforma',
+        'feature2.list3': 'Sem risco de cópias ou vazamentos',
         'feature2.link': 'Saiba mais',
 
         'feature3.title': 'Permissões por usuário e grupo (acesso mínimo necessário)',
@@ -92,7 +94,7 @@ const translations = {
         'step1.badge': 'Controle Total',
 
         'step2.title': 'Cadastro de Certificados',
-        'step2.description': 'O administrador envia os certificados digitais para nossa plataforma. Armazenamento seguro com criptografia AES-256',
+        'step2.description': 'O administrador envia os certificados digitais para nossa plataforma. Processamento seguro com criptografia AES-256',
         'step2.badge': '100% Seguro',
 
         'step3.title': 'Usuários & Grupos',
@@ -111,7 +113,7 @@ const translations = {
         'security.title': 'Segurança Garantida',
         'security.description': 'O colaborador <strong>nunca baixa o certificado</strong> na máquina dele. Tudo fica protegido em nossa nuvem, garantindo que certificados não sejam espalhados ou usados incorretamente',
         'security.feature1': 'Sem downloads locais',
-        'security.feature2': 'Controle de sessão dos certificados',
+        'security.feature2': 'Controle de registro de uso dos certificados',
         'security.feature3': 'Log de todas as ações',
 
         // Contact Section
@@ -123,6 +125,8 @@ const translations = {
         // Contact Info Cards
         'contactInfo.email': 'Email',
         'contactInfo.emailMeta': 'Resposta em até 2h',
+        'contactInfo.whatsapp': 'WhatsApp',
+        'contactInfo.whatsappMeta': 'Atendimento rápido',
         'contactInfo.hours': 'Horário de Atendimento',
         'contactInfo.hoursText': 'Segunda a Sexta',
         'contactInfo.hoursMeta': '8h às 18h (Horário de Brasília)',
@@ -184,8 +188,8 @@ const translations = {
         'faq.a3': 'Você pode criar grupos de usuários (ex: Financeiro, Fiscal, Compras) e definir exatamente quais certificados cada grupo pode acessar. Cada colaborador só vê e usa o que foi autorizado pelo administrador.',
         'faq.q4': 'Funciona em Windows e Mac?',
         'faq.a4': 'Sim! O aplicativo da TrustPanel é compatível com Windows e macOS. Basta instalar o app leve no computador do colaborador e fazer login para ter acesso aos certificados autorizados.',
-        'faq.q6': 'A plataforma está em conformidade com a LGPD?',
-        'faq.a6': 'Sim, o TrustPanel foi desenvolvido em total conformidade com a Lei Geral de Proteção de Dados (LGPD). Todos os dados são tratados com segurança, transparência e respeito à privacidade dos usuários.',
+        'faq.q5': 'A plataforma está em conformidade com a LGPD?',
+        'faq.a5': 'Sim, o TrustPanel foi desenvolvido em total conformidade com a Lei Geral de Proteção de Dados (LGPD). Todos os dados são tratados com segurança, transparência e respeito à privacidade dos usuários.',
     },
 
     'en': {
@@ -224,7 +228,9 @@ const translations = {
         'stats.alerts': 'Alerts',
         'stats.alertsText': 'Expiration Warnings',
         'stats.logs': 'Logs',
-        'stats.logsText': 'Access Restriction',
+        'stats.logsText': 'Usage Records',
+        'stats.access': 'Restriction',
+        'stats.accessText': 'Access Control',
 
         // Features Section
         'features.subtitle': 'Main Features',
@@ -241,11 +247,11 @@ const translations = {
         'feature1.list3': 'Dashboard with expiration overview',
         'feature1.link': 'Learn more',
 
-        'feature2.title': 'Secure and organized certificate storage',
-        'feature2.description': 'Keep all your digital certificates in a secure location, with state-of-the-art encryption and intelligent organization.',
-        'feature2.list1': 'AES-256 bit encryption',
-        'feature2.list2': 'Automatic and redundant backup',
-        'feature2.list3': 'Organization by categories and tags',
+        'feature2.title': 'Secure usage without local storage',
+        'feature2.description': 'The certificate is never downloaded to the collaborator\'s machine. Usage happens securely directly through the platform, with no risk of copies or leaks.',
+        'feature2.list1': 'Certificate never stays on the local machine',
+        'feature2.list2': 'Secure usage directly through the platform',
+        'feature2.list3': 'No risk of copies or leaks',
         'feature2.link': 'Learn more',
 
         'feature3.title': 'Permissions per user and group (minimum access required)',
@@ -280,7 +286,7 @@ const translations = {
         'step1.badge': 'Full Control',
 
         'step2.title': 'Certificate Registration',
-        'step2.description': 'The administrator sends the digital certificates to our platform. Secure storage with AES-256 encryption',
+        'step2.description': 'The administrator sends the digital certificates to our platform. Secure processing with AES-256 encryption',
         'step2.badge': '100% Secure',
 
         'step3.title': 'Users & Groups',
@@ -299,7 +305,7 @@ const translations = {
         'security.title': 'Guaranteed Security',
         'security.description': 'The collaborator <strong>never downloads the certificate</strong> on their machine. Everything is protected in our cloud, ensuring that certificates are not spread or used incorrectly',
         'security.feature1': 'No local downloads',
-        'security.feature2': 'Certificate session control',
+        'security.feature2': 'Certificate usage tracking control',
         'security.feature3': 'Log of all actions',
 
         // Contact Section
@@ -311,6 +317,8 @@ const translations = {
         // Contact Info Cards
         'contactInfo.email': 'Email',
         'contactInfo.emailMeta': 'Response within 2h',
+        'contactInfo.whatsapp': 'WhatsApp',
+        'contactInfo.whatsappMeta': 'Quick support',
         'contactInfo.hours': 'Business Hours',
         'contactInfo.hoursText': 'Monday to Friday',
         'contactInfo.hoursMeta': '8am to 6pm (Brasília Time)',
@@ -372,8 +380,8 @@ const translations = {
         'faq.a3': 'You can create user groups (e.g., Finance, Tax, Purchasing) and define exactly which certificates each group can access. Each employee only sees and uses what has been authorized by the administrator.',
         'faq.q4': 'Does it work on Windows and Mac?',
         'faq.a4': 'Yes! The TrustPanel app is compatible with Windows and macOS. Simply install the lightweight app on the employee\'s computer and log in to access authorized certificates.',
-        'faq.q6': 'Is the platform LGPD compliant?',
-        'faq.a6': 'Yes, TrustPanel was developed in full compliance with the General Data Protection Law (LGPD). All data is handled with security, transparency, and respect for user privacy.',
+        'faq.q5': 'Is the platform LGPD compliant?',
+        'faq.a5': 'Yes, TrustPanel was developed in full compliance with the General Data Protection Law (LGPD). All data is handled with security, transparency, and respect for user privacy.',
     },
 
     'es': {
@@ -412,7 +420,9 @@ const translations = {
         'stats.alerts': 'Alertas',
         'stats.alertsText': 'De Vencimiento',
         'stats.logs': 'Logs',
-        'stats.logsText': 'Restricción de Acceso',
+        'stats.logsText': 'Registro de Uso',
+        'stats.access': 'Restricción',
+        'stats.accessText': 'De Acceso',
 
         // Features Section
         'features.subtitle': 'Características Principales',
@@ -429,11 +439,11 @@ const translations = {
         'feature1.list3': 'Panel con visión de vencimientos',
         'feature1.link': 'Saber más',
 
-        'feature2.title': 'Almacenamiento seguro y organizado de certificados',
-        'feature2.description': 'Mantén todos tus certificados digitales en un lugar seguro, con encriptación de punta y organización inteligente.',
-        'feature2.list1': 'Encriptación AES-256 bit',
-        'feature2.list2': 'Respaldo automático y redundante',
-        'feature2.list3': 'Organización por categorías y etiquetas',
+        'feature2.title': 'Uso seguro sin almacenamiento local',
+        'feature2.description': 'El certificado nunca se descarga en la máquina del colaborador. El uso ocurre de forma segura directamente por la plataforma, sin riesgo de copias o filtraciones.',
+        'feature2.list1': 'El certificado nunca queda en la máquina local',
+        'feature2.list2': 'Uso seguro directo por la plataforma',
+        'feature2.list3': 'Sin riesgo de copias o filtraciones',
         'feature2.link': 'Saber más',
 
         'feature3.title': 'Permisos por usuario y grupo (acceso mínimo necesario)',
@@ -468,7 +478,7 @@ const translations = {
         'step1.badge': 'Control Total',
 
         'step2.title': 'Registro de Certificados',
-        'step2.description': 'El administrador envía los certificados digitales a nuestra plataforma. Almacenamiento seguro con encriptación AES-256',
+        'step2.description': 'El administrador envía los certificados digitales a nuestra plataforma. Procesamiento seguro con encriptación AES-256',
         'step2.badge': '100% Seguro',
 
         'step3.title': 'Usuarios y Grupos',
@@ -487,7 +497,7 @@ const translations = {
         'security.title': 'Seguridad Garantizada',
         'security.description': 'El colaborador <strong>nunca descarga el certificado</strong> en su máquina. Todo queda protegido en nuestra nube, garantizando que los certificados no se esparzan o usen incorrectamente',
         'security.feature1': 'Sin descargas locales',
-        'security.feature2': 'Control de sesión de certificados',
+        'security.feature2': 'Control de registro de uso de certificados',
         'security.feature3': 'Registro de todas las acciones',
 
         // Contact Section
@@ -499,6 +509,8 @@ const translations = {
         // Contact Info Cards
         'contactInfo.email': 'Email',
         'contactInfo.emailMeta': 'Respuesta en hasta 2h',
+        'contactInfo.whatsapp': 'WhatsApp',
+        'contactInfo.whatsappMeta': 'Atención rápida',
         'contactInfo.hours': 'Horario de Atención',
         'contactInfo.hoursText': 'Lunes a Viernes',
         'contactInfo.hoursMeta': '8h a 18h (Horario de Brasília)',
@@ -560,8 +572,8 @@ const translations = {
         'faq.a3': 'Puedes crear grupos de usuarios (ej: Financiero, Fiscal, Compras) y definir exactamente qué certificados puede acceder cada grupo. Cada colaborador solo ve y usa lo que ha sido autorizado por el administrador.',
         'faq.q4': '¿Funciona en Windows y Mac?',
         'faq.a4': '¡Sí! La aplicación de TrustPanel es compatible con Windows y macOS. Simplemente instala la app ligera en la computadora del colaborador e inicia sesión para acceder a los certificados autorizados.',
-        'faq.q6': '¿La plataforma cumple con la LGPD?',
-        'faq.a6': 'Sí, TrustPanel fue desarrollado en total conformidad con la Ley General de Protección de Datos (LGPD). Todos los datos son tratados con seguridad, transparencia y respeto a la privacidad de los usuarios.',
+        'faq.q5': '¿La plataforma cumple con la LGPD?',
+        'faq.a5': 'Sí, TrustPanel fue desarrollado en total conformidad con la Ley General de Protección de Datos (LGPD). Todos los datos son tratados con seguridad, transparencia y respeto a la privacidad de los usuarios.',
     }
 };
 
