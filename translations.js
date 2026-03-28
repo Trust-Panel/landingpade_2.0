@@ -155,8 +155,15 @@ const translations = {
         'contactTrust.item2': 'Resposta rápida',
         'contactTrust.item3': 'Consultoria gratuita',
 
+        // Lead Capture
+        'leadCapture.title': 'Quer saber quando tivermos novidades?',
+        'leadCapture.description': 'Deixe seu e-mail e seja o primeiro a saber sobre atualizações e novos recursos do TrustPanel.',
+        'leadCapture.btn': 'Me Avise',
+        'leadCapture.privacy': 'Apenas novidades do sistema. Sem spam.',
+
         // Footer
         'footer.description': 'A plataforma mais confiável para gerenciamento de certificados digitais A1.',
+        'footer.instagramCta': '@trust.panel',
         'footer.product': 'Produto',
         'footer.company': 'Empresa',
         'footer.support': 'Suporte',
@@ -171,7 +178,7 @@ const translations = {
         'footer.helpCenter': 'Central de Ajuda',
         'footer.status': 'Status',
         'footer.documentation': 'Documentação',
-        'footer.copyright': '© 2025 TrustPanel. Todos os direitos reservados. |',
+        'footer.copyright': '© 2026 TrustPanel. Todos os direitos reservados. |',
         'footer.privacy': 'Política de Privacidade',
         'footer.terms': 'Termos de Uso',
 
@@ -347,8 +354,15 @@ const translations = {
         'contactTrust.item2': 'Fast response',
         'contactTrust.item3': 'Free consultation',
 
+        // Lead Capture
+        'leadCapture.title': 'Want to know when we have updates?',
+        'leadCapture.description': 'Leave your email and be the first to know about TrustPanel updates and new features.',
+        'leadCapture.btn': 'Notify Me',
+        'leadCapture.privacy': 'System updates only. No spam.',
+
         // Footer
         'footer.description': 'The most reliable platform for managing A1 digital certificates.',
+        'footer.instagramCta': '@trust.panel',
         'footer.product': 'Product',
         'footer.company': 'Company',
         'footer.support': 'Support',
@@ -363,7 +377,7 @@ const translations = {
         'footer.helpCenter': 'Help Center',
         'footer.status': 'Status',
         'footer.documentation': 'Documentation',
-        'footer.copyright': '© 2025 TrustPanel. All rights reserved. |',
+        'footer.copyright': '© 2026 TrustPanel. All rights reserved. |',
         'footer.privacy': 'Privacy Policy',
         'footer.terms': 'Terms of Use',
 
@@ -539,8 +553,15 @@ const translations = {
         'contactTrust.item2': 'Respuesta rápida',
         'contactTrust.item3': 'Consultoría gratuita',
 
+        // Lead Capture
+        'leadCapture.title': '¿Quieres saber cuando tengamos novedades?',
+        'leadCapture.description': 'Deja tu correo y sé el primero en enterarte de actualizaciones y nuevas funciones de TrustPanel.',
+        'leadCapture.btn': 'Avísame',
+        'leadCapture.privacy': 'Solo novedades del sistema. Sin spam.',
+
         // Footer
         'footer.description': 'La plataforma más confiable para la gestión de certificados digitales A1.',
+        'footer.instagramCta': '@trust.panel',
         'footer.product': 'Producto',
         'footer.company': 'Empresa',
         'footer.support': 'Soporte',
@@ -555,7 +576,7 @@ const translations = {
         'footer.helpCenter': 'Centro de Ayuda',
         'footer.status': 'Estado',
         'footer.documentation': 'Documentación',
-        'footer.copyright': '© 2025 TrustPanel. Todos los derechos reservados. |',
+        'footer.copyright': '© 2026 TrustPanel. Todos los derechos reservados. |',
         'footer.privacy': 'Política de Privacidad',
         'footer.terms': 'Términos de Uso',
 

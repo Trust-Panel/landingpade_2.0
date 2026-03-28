@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="TrustPanel - Gerenciamento inteligente de certificados digitais A1. Simplifique sua gestão de certificados com nossa plataforma.">
+        content="TrustPanel - App de gerenciamento de certificados digitais A1. Controle vencimentos, restrinja acessos e proteja seus certificados com criptografia AES-256. Experimente grátis.">
     <meta name="robots" content="index, follow">
+
+    <!-- Keywords para buscas não-branded -->
+    <meta name="keywords" content="app gerenciamento de certificado, gerenciamento certificado digital, certificado digital A1, controle certificado digital contabilidade, gestão certificados digitais">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://trustpanel.com.br/">
@@ -20,17 +23,21 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://trustpanel.com.br/">
-    <meta property="og:title" content="TrustPanel - Gerenciamento de Certificados Digitais A1">
-    <meta property="og:description" content="Automatize 100% da gestão dos seus certificados digitais. Receba alertas antes do vencimento e evite multas e bloqueios operacionais.">
+    <meta property="og:title" content="TrustPanel - App de Gerenciamento de Certificados Digitais A1">
+    <meta property="og:description" content="Controle vencimentos, restrinja acessos e proteja seus certificados digitais A1 com criptografia AES-256. Alertas automáticos e gestão centralizada.">
     <meta property="og:image" content="https://trustpanel.com.br/Images/dash2.png">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="TrustPanel">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TrustPanel - Gerenciamento de Certificados Digitais A1">
-    <meta name="twitter:description" content="Automatize 100% da gestão dos seus certificados digitais. Receba alertas antes do vencimento e evite multas e bloqueios operacionais.">
+    <meta name="twitter:title" content="TrustPanel - App de Gerenciamento de Certificados Digitais A1">
+    <meta name="twitter:description" content="Controle vencimentos, restrinja acessos e proteja seus certificados digitais A1 com criptografia AES-256. Alertas automáticos e gestão centralizada.">
     <meta name="twitter:image" content="https://trustpanel.com.br/Images/dash2.png">
+
+    <!-- Instagram / Social Discovery -->
+    <meta property="og:see_also" content="https://www.instagram.com/trust.panel/">
+    <link rel="me" href="https://www.instagram.com/trust.panel/">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE9H1PB1BD"></script>
@@ -39,8 +46,17 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-GE9H1PB1BD');
+
+        // Ação 03: Marcar tráfego suspeito de bots/data centers para filtro no GA4
+        gtag('set', 'user_properties', { traffic_type: 'organic' });
+        (function detectBotTraffic() {
+            var isBot = /bot|crawl|spider|slurp|bingpreview|mediapartners|facebookexternalhit|headlesschrome|phantomjs|prerender|lighthouse/i.test(navigator.userAgent);
+            if (!navigator.webdriver && !isBot) return;
+            gtag('set', 'user_properties', { traffic_type: 'bot_suspected' });
+            gtag('event', 'bot_traffic_detected', { user_agent: navigator.userAgent.substring(0, 100) });
+        })();
     </script>
-    <title>TrustPanel - Gerenciamento de Certificados Digitais A1</title>
+    <title>TrustPanel - App de Gerenciamento de Certificados Digitais A1 | Controle e Segurança</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +64,111 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="Images/favicon.jpg" type="image/jpg">
     <script src="translations.js" defer></script>
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TrustPanel",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows, macOS",
+        "description": "App de gerenciamento de certificados digitais A1 para contabilidades e empresas. Controle vencimentos, restrinja acessos por usuário e grupo, e proteja certificados com criptografia AES-256.",
+        "url": "https://trustpanel.com.br/",
+        "image": "https://trustpanel.com.br/Images/dash2.png",
+        "author": {
+            "@type": "Organization",
+            "name": "TrustPanel",
+            "url": "https://trustpanel.com.br/"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock"
+        },
+        "featureList": [
+            "Alertas de vencimento de certificados digitais",
+            "Controle de acesso por usuário e grupo",
+            "Criptografia AES-256",
+            "Logs completos de uso de certificados",
+            "Gerenciamento centralizado de certificados A1",
+            "Compatível com Windows e macOS",
+            "Gestão de certificado digital para contabilidade"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "O que é o TrustPanel?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O TrustPanel é uma plataforma de gerenciamento de certificados digitais A1 que permite controlar, monitorar e organizar todos os seus certificados em um único lugar, com alertas de vencimento e controle de acesso por usuário."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Meus certificados ficam seguros na plataforma?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim! Utilizamos criptografia AES-256, a mesma usada por bancos e instituições financeiras. Além disso, os certificados nunca são baixados na máquina do colaborador — tudo funciona na nuvem com total rastreabilidade."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como funciona o controle de acesso?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Você pode criar grupos de usuários (ex: Financeiro, Fiscal, Compras) e definir exatamente quais certificados cada grupo pode acessar. Cada colaborador só vê e usa o que foi autorizado pelo administrador."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Funciona em Windows e Mac?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim! O aplicativo da TrustPanel é compatível com Windows e macOS. Basta instalar o app leve no computador do colaborador e fazer login para ter acesso aos certificados autorizados."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "A plataforma está em conformidade com a LGPD?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim, o TrustPanel foi desenvolvido em total conformidade com a Lei Geral de Proteção de Dados (LGPD). Todos os dados são tratados com segurança, transparência e respeito à privacidade dos usuários."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TrustPanel",
+        "url": "https://trustpanel.com.br/",
+        "logo": "https://trustpanel.com.br/Images/logo2.png",
+        "sameAs": [
+            "https://www.instagram.com/trust.panel/",
+            "https://www.linkedin.com/company/trustpanel"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-66-99262-3898",
+            "contactType": "sales",
+            "availableLanguage": ["Portuguese", "English", "Spanish"]
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -136,7 +257,7 @@
                     </div>
 
                     <div class="hero__actions">
-                        <a href="https://wa.me/5566992623898" class="btn btn--primary btn--large btn--pulse" rel="noopener noreferrer" target="_blank">
+                        <a href="#contact" class="btn btn--primary btn--large btn--pulse" id="hero-cta">
                             <i class="fab fa-whatsapp"></i>
                             <span data-i18n="hero.btnPrimary">Falar com Especialista</span>
                         </a>
@@ -296,7 +417,7 @@
                                 <span data-i18n="feature1.list3">Dashboard com visão de vencimentos</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5566992623898" class="feature__link" rel="noopener noreferrer" target="_blank">
+                        <a href="#contact" class="feature__link">
                             <span data-i18n="feature1.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -337,7 +458,7 @@
                                 <span data-i18n="feature2.list3">Sem risco de cópias ou vazamentos</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5566992623898" class="feature__link" rel="noopener noreferrer" target="_blank">
+                        <a href="#contact" class="feature__link">
                             <span data-i18n="feature2.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -379,7 +500,7 @@
                                 <span data-i18n="feature3.list3">Log completo de atividades</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5566992623898" class="feature__link" rel="noopener noreferrer" target="_blank">
+                        <a href="#contact" class="feature__link">
                             <span data-i18n="feature3.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -420,7 +541,7 @@
                                 <span data-i18n="feature4.list3">Auditoria completa para conformidade</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5566992623898" class="feature__link" rel="noopener noreferrer" target="_blank">
+                        <a href="#contact" class="feature__link">
                             <span data-i18n="feature4.link">Saiba mais</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -434,7 +555,7 @@
                             <h3 data-i18n="featuresCta.title">Pronto para simplificar a gestão dos seus certificados?</h3>
                             <p data-i18n="featuresCta.description">Fale com nosso time e descubra como o TrustPanel pode automatizar e proteger seus certificados digitais</p>
                         </div>
-                        <a href="https://wa.me/5566992623898" class="btn btn--primary btn--large" rel="noopener noreferrer" target="_blank">
+                        <a href="#contact" class="btn btn--primary btn--large">
                             <i class="fab fa-whatsapp"></i>
                             <span data-i18n="featuresCta.btn">Quero Conhecer o TrustPanel</span>
                         </a>
@@ -736,44 +857,13 @@
                                 <label for="website">Website</label>
                                 <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                             </div>
-                            <div class="form__row">
-                                <div class="form__group">
-                                    <label for="name" class="form__label">
-                                        <i class="fas fa-user"></i>
-                                        <span data-i18n="contactForm.name">Nome Completo</span>
-                                    </label>
-                                    <input type="text" id="name" name="name" class="form__input" data-i18n="contactForm.namePlaceholder" placeholder="Seu nome"
-                                        required>
-                                </div>
-
-                                <div class="form__group">
-                                    <label for="email" class="form__label">
-                                        <i class="fas fa-envelope"></i>
-                                        <span data-i18n="contactForm.email">Email Corporativo</span>
-                                    </label>
-                                    <input type="email" id="email" name="email" class="form__input"
-                                        data-i18n="contactForm.emailPlaceholder" placeholder="seu@email.com" required>
-                                </div>
-                            </div>
-
-                            <div class="form__row">
-                                <div class="form__group">
-                                    <label for="company" class="form__label">
-                                        <i class="fas fa-building"></i>
-                                        <span data-i18n="contactForm.company">Empresa</span>
-                                    </label>
-                                    <input type="text" id="company" name="company" class="form__input"
-                                        data-i18n="contactForm.companyPlaceholder" placeholder="Nome da empresa" required>
-                                </div>
-
-                                <div class="form__group">
-                                    <label for="phone" class="form__label">
-                                        <i class="fas fa-phone"></i>
-                                        <span data-i18n="contactForm.phone">Telefone</span>
-                                    </label>
-                                    <input type="tel" id="phone" name="phone" class="form__input"
-                                        data-i18n="contactForm.phonePlaceholder" placeholder="(00) 00000-0000">
-                                </div>
+                            <div class="form__group">
+                                <label for="name" class="form__label">
+                                    <i class="fas fa-user"></i>
+                                    <span data-i18n="contactForm.name">Nome Completo</span>
+                                </label>
+                                <input type="text" id="name" name="name" class="form__input" data-i18n="contactForm.namePlaceholder" placeholder="Seu nome"
+                                    required>
                             </div>
 
                             <div class="form__group">
@@ -781,7 +871,7 @@
                                     <i class="fas fa-comment-dots"></i>
                                     <span data-i18n="contactForm.message">Mensagem</span>
                                 </label>
-                                <textarea id="message" name="message" class="form__textarea" rows="5"
+                                <textarea id="message" name="message" class="form__textarea" rows="4"
                                     data-i18n="contactForm.messagePlaceholder" placeholder="Como podemos ajudar sua empresa?" required></textarea>
                             </div>
 
@@ -817,6 +907,40 @@
         </section>
     </main>
 
+    <!-- Newsletter / Lead Capture Bar -->
+    <section class="lead-capture" id="lead-capture">
+        <div class="container">
+            <div class="lead-capture__wrapper">
+                <div class="lead-capture__content">
+                    <div class="lead-capture__icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="lead-capture__text">
+                        <h3 data-i18n="leadCapture.title">Quer saber quando tivermos novidades?</h3>
+                        <p data-i18n="leadCapture.description">Deixe seu e-mail e seja o primeiro a saber sobre atualizações e novos recursos do TrustPanel.</p>
+                    </div>
+                </div>
+                <form class="lead-capture__form" id="lead-capture-form">
+                    <!-- Honeypot -->
+                    <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                        <input type="text" name="fax" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div class="lead-capture__inputs">
+                        <input type="email" name="lead_email" class="lead-capture__input" placeholder="Seu melhor e-mail" required>
+                        <button type="submit" class="btn btn--primary lead-capture__btn">
+                            <i class="fas fa-bell"></i>
+                            <span data-i18n="leadCapture.btn">Me Avise</span>
+                        </button>
+                    </div>
+                    <p class="lead-capture__privacy">
+                        <i class="fas fa-lock"></i>
+                        <span data-i18n="leadCapture.privacy">Apenas novidades do sistema. Sem spam.</span>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -832,8 +956,9 @@
                         <a href="https://www.linkedin.com/company/trustpanel" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn do TrustPanel">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://www.instagram.com/trust.panel/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram do TrustPanel">
+                        <a href="https://www.instagram.com/trust.panel/" class="footer__instagram-cta" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
+                            <span data-i18n="footer.instagramCta">@trust.panel</span>
                         </a>
                     </div>
                 </div>

@@ -161,6 +161,52 @@ if (sliderWrapper && indicators.length > 0) {
     });
 }
 
+// ===== GA4 EVENT TRACKING =====
+function trackGA4Event(eventName, params) {
+    if (typeof gtag === 'function') {
+        gtag('event', eventName, params);
+    }
+}
+
+// Track CTA clicks
+document.querySelectorAll('.btn--primary').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const label = btn.closest('.hero__actions') ? 'hero_cta' :
+                      btn.closest('.features__cta') ? 'features_cta' :
+                      btn.closest('.contact__form') ? 'form_submit' : 'other_cta';
+        trackGA4Event('cta_click', { cta_location: label });
+    });
+});
+
+// Track hero CTA smooth scroll to form
+const heroCta = document.getElementById('hero-cta');
+if (heroCta) {
+    heroCta.addEventListener('click', (e) => {
+        e.preventDefault();
+        const contactSection = document.querySelector('#contact');
+        if (contactSection) {
+            const offsetTop = contactSection.offsetTop - 70;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            // Focus the first form field after scrolling
+            setTimeout(() => {
+                const firstInput = contactForm?.querySelector('.form__input');
+                if (firstInput) firstInput.focus();
+            }, 800);
+        }
+    });
+}
+
+// Track form_start (first interaction with form)
+let formStartTracked = false;
+if (contactForm) {
+    contactForm.addEventListener('focusin', () => {
+        if (!formStartTracked) {
+            formStartTracked = true;
+            trackGA4Event('form_start', { form_name: 'contact' });
+        }
+    });
+}
+
 // ===== FORM HANDLING =====
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -170,6 +216,9 @@ if (contactForm) {
         const honeypot = contactForm.querySelector('input[name="website"]');
         if (honeypot && honeypot.value) return;
         
+        // Track form submission
+        trackGA4Event('generate_lead', { form_name: 'contact', method: 'whatsapp' });
+
         // Get form data
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
@@ -179,9 +228,6 @@ if (contactForm) {
 *Nova Mensagem - TrustPanel* 📧
 
 *Nome:* ${data.name}
-*Email:* ${data.email}
-*Empresa:* ${data.company}
-${data.phone ? `*Telefone:* ${data.phone}` : ''}
 
 *Mensagem:*
 ${data.message}
@@ -202,6 +248,7 @@ ${data.message}
         // Reset form after a short delay
         setTimeout(() => {
             contactForm.reset();
+            formStartTracked = false;
         }, 1000);
     });
 }
@@ -479,6 +526,41 @@ function initFaqAccordion() {
     });
 }
 
+// ===== LEAD CAPTURE FORM =====
+function initLeadCapture() {
+    const leadForm = document.getElementById('lead-capture-form');
+    if (!leadForm) return;
+
+    leadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Honeypot check
+        const honeypot = leadForm.querySelector('input[name="fax"]');
+        if (honeypot && honeypot.value) return;
+
+        const emailInput = leadForm.querySelector('input[name="lead_email"]');
+        const email = emailInput.value.trim();
+        if (!email) return;
+
+        // Track lead capture event in GA4
+        trackGA4Event('generate_lead', {
+            form_name: 'newsletter',
+            method: 'email',
+            lead_email_domain: email.split('@')[1] || 'unknown'
+        });
+
+        // Send to WhatsApp as a quick lead notification
+        const whatsappNumber = '5566992623898';
+        const message = `*Novo Lead - Newsletter TrustPanel* 📩\n\n*Email:* ${email}`;
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+
+        // Show success
+        showNotification('Obrigado! Redirecionando...', 'success');
+        leadForm.reset();
+    });
+}
+
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
@@ -486,6 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTestimonialCarousel();
     animateOnScroll();
     initFaqAccordion();
+    initLeadCapture();
     
     // Add loading complete class to body
     document.body.classList.add('loaded');
