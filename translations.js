@@ -47,7 +47,7 @@ const translations = {
 
     // Features
     'features.eyebrow': 'Recursos principais',
-    'features.title': 'Tudo que o seu departamento de TI e Fiscal precisa — em uma plataforma só.',
+    'features.title': 'Tudo que os seus departamentos de TI, Contabilidade e Jurídico precisam — em uma plataforma só.',
     'features.lede': 'Infraestrutura projetada para empresas que não podem parar por causa de um certificado vencido ou vazado.',
 
     'feat1.tag': '01 — ALERTAS',
@@ -96,7 +96,7 @@ const translations = {
     'step1.desc': 'Um usuário-chave (CEO, Diretor de TI, CFO ou Controller) é designado com perfil de administrador e passa a gerenciar toda a plataforma institucionalmente.',
     'step1.badge': 'Controle Total',
     'step2.title': 'Cadastro de Certificados',
-    'step2.desc': 'O administrador carrega os certificados A1 na plataforma. O processamento acontece em ambiente criptografado AES-256, com os arquivos imediatamente isolados do resto da rede.',
+    'step2.desc': 'A plataforma realiza apenas a leitura dos certificados A1 em ambiente criptografado AES-256. O arquivo e a senha nunca são enviados nem armazenados em nossos servidores — permanecem sempre sob seu controle.',
     'step2.badge': 'Criptografia Bancária',
     'step3.title': 'Usuários & Grupos',
     'step3.desc': 'Crie colaboradores, organize por grupos departamentais (Financeiro, Fiscal, Jurídico, Compras) e defina de forma cirúrgica quais certificados cada grupo pode acessar.',
@@ -113,6 +113,7 @@ const translations = {
     'security.tag1': 'Sem downloads',
     'security.tag2': 'Log completo',
     'security.tag3': 'Auditável',
+    'security.tag4': 'Restrição de Acesso',
 
     // FAQ
     'faq.eyebrow': 'Perguntas frequentes',
@@ -121,7 +122,7 @@ const translations = {
     'faq.q1': 'O que é a TrustPanel?',
     'faq.a1': 'Plataforma corporativa de gerenciamento de certificados digitais A1. Permite controlar, monitorar e organizar todos os certificados da empresa em um único painel, com alertas de vencimento, controle granular de acesso e trilha de auditoria completa.',
     'faq.q2': 'Meus certificados ficam seguros na plataforma?',
-    'faq.a2': 'Sim. Utilizamos criptografia AES-256, o mesmo padrão usado por bancos e instituições financeiras. Os certificados nunca são baixados na máquina do colaborador e toda operação acontece na nuvem com rastreabilidade ponta-a-ponta.',
+    'faq.a2': 'Sim. A plataforma realiza apenas a leitura dos certificados A1 em ambiente criptografado AES-256 — o mesmo padrão usado por bancos e instituições financeiras. O arquivo e a senha nunca são enviados nem armazenados em nossos servidores, e os certificados também nunca são baixados na máquina do colaborador. Toda operação acontece com rastreabilidade ponta-a-ponta.',
     'faq.q3': 'Como funciona o controle de acesso por grupos?',
     'faq.a3': 'Você cria grupos por área (Financeiro, Fiscal, Compras, Jurídico) e define exatamente quais certificados cada grupo pode acessar. Cada colaborador só enxerga o que foi autorizado — princípio de menor privilégio aplicado por padrão.',
     'faq.q4': 'Funciona em Windows e macOS?',
@@ -208,7 +209,7 @@ const translations = {
     'showcase.card3.desc': 'Organize by client, define groups and control permissions from a single sidebar.',
 
     'features.eyebrow': 'Core features',
-    'features.title': 'Everything your IT and Tax department needs — in a single platform.',
+    'features.title': 'Everything your IT, Accounting and Legal departments need — in a single platform.',
     'features.lede': 'Infrastructure designed for companies that cannot stop because of an expired or leaked certificate.',
 
     'feat1.tag': '01 — ALERTS',
@@ -255,7 +256,7 @@ const translations = {
     'step1.desc': 'A key user (CEO, IT Director, CFO or Controller) is designated with administrator profile and manages the entire platform institutionally.',
     'step1.badge': 'Full Control',
     'step2.title': 'Certificate Registration',
-    'step2.desc': 'The administrator uploads A1 certificates to the platform. Processing happens in an AES-256 encrypted environment, with files immediately isolated from the rest of the network.',
+    'step2.desc': 'The platform only reads A1 certificates within an AES-256 encrypted environment. Neither the file nor the password is ever uploaded or stored on our servers — they always remain under your control.',
     'step2.badge': 'Bank-grade Encryption',
     'step3.title': 'Users & Groups',
     'step3.desc': 'Create employees, organize by department groups (Finance, Tax, Legal, Procurement) and surgically define which certificates each group can access.',
@@ -272,6 +273,7 @@ const translations = {
     'security.tag1': 'No downloads',
     'security.tag2': 'Complete logs',
     'security.tag3': 'Auditable',
+    'security.tag4': 'Access Restriction',
 
     'faq.eyebrow': 'Frequently asked questions',
     'faq.title': 'Everything you need to know before deciding.',
@@ -279,7 +281,7 @@ const translations = {
     'faq.q1': 'What is TrustPanel?',
     'faq.a1': 'Enterprise platform for managing A1 digital certificates. Allows you to control, monitor and organize all company certificates in a single panel, with expiration alerts, granular access control and complete audit trail.',
     'faq.q2': 'Are my certificates safe on the platform?',
-    'faq.a2': 'Yes. We use AES-256 encryption, the same standard used by banks and financial institutions. Certificates are never downloaded to user devices and all operations happen in the cloud with end-to-end traceability.',
+    'faq.a2': 'Yes. The platform only reads A1 certificates within an AES-256 encrypted environment — the same standard used by banks and financial institutions. Neither the file nor the password is ever uploaded or stored on our servers, and certificates are never downloaded to user devices either. Every operation happens with end-to-end traceability.',
     'faq.q3': 'How does group access control work?',
     'faq.a3': 'You create groups by area (Finance, Tax, Procurement, Legal) and define exactly which certificates each group can access. Each employee only sees what was authorized — least-privilege principle applied by default.',
     'faq.q4': 'Does it work on Windows and macOS?',
@@ -364,7 +366,7 @@ const translations = {
     'showcase.card3.desc': 'Organice por cliente, defina grupos y controle permisos desde un menú lateral único.',
 
     'features.eyebrow': 'Recursos principales',
-    'features.title': 'Todo lo que su departamento de TI y Fiscal necesita — en una sola plataforma.',
+    'features.title': 'Todo lo que sus departamentos de TI, Contabilidad y Jurídico necesitan — en una sola plataforma.',
     'features.lede': 'Infraestructura diseñada para empresas que no pueden detenerse por un certificado vencido o filtrado.',
 
     'feat1.tag': '01 — ALERTAS',
@@ -411,7 +413,7 @@ const translations = {
     'step1.desc': 'Un usuario clave (CEO, Director de TI, CFO o Controller) es designado con perfil de administrador y gestiona toda la plataforma institucionalmente.',
     'step1.badge': 'Control Total',
     'step2.title': 'Registro de Certificados',
-    'step2.desc': 'El administrador carga los certificados A1 en la plataforma. El procesamiento ocurre en un entorno cifrado AES-256, con los archivos inmediatamente aislados del resto de la red.',
+    'step2.desc': 'La plataforma solo realiza la lectura de los certificados A1 en un entorno cifrado AES-256. Ni el archivo ni la contraseña se envían o almacenan en nuestros servidores — siempre permanecen bajo su control.',
     'step2.badge': 'Cifrado Bancario',
     'step3.title': 'Usuarios y Grupos',
     'step3.desc': 'Cree colaboradores, organice por grupos departamentales (Financiero, Fiscal, Legal, Compras) y defina con precisión qué certificados puede acceder cada grupo.',
@@ -428,6 +430,7 @@ const translations = {
     'security.tag1': 'Sin descargas',
     'security.tag2': 'Log completo',
     'security.tag3': 'Auditable',
+    'security.tag4': 'Restricción de Acceso',
 
     'faq.eyebrow': 'Preguntas frecuentes',
     'faq.title': 'Todo lo que necesita saber antes de decidir.',
@@ -435,7 +438,7 @@ const translations = {
     'faq.q1': '¿Qué es TrustPanel?',
     'faq.a1': 'Plataforma corporativa de gestión de certificados digitales A1. Permite controlar, monitorear y organizar todos los certificados de la empresa en un único panel, con alertas de vencimiento, control granular de acceso y trilla de auditoría completa.',
     'faq.q2': '¿Mis certificados están seguros en la plataforma?',
-    'faq.a2': 'Sí. Utilizamos cifrado AES-256, el mismo estándar usado por bancos e instituciones financieras. Los certificados nunca se descargan en la máquina del colaborador y toda operación ocurre en la nube con trazabilidad de extremo a extremo.',
+    'faq.a2': 'Sí. La plataforma solo realiza la lectura de los certificados A1 en un entorno cifrado AES-256 — el mismo estándar usado por bancos e instituciones financieras. Ni el archivo ni la contraseña se envían o almacenan en nuestros servidores, y los certificados tampoco se descargan nunca en la máquina del colaborador. Toda operación ocurre con trazabilidad de extremo a extremo.',
     'faq.q3': '¿Cómo funciona el control de acceso por grupos?',
     'faq.a3': 'Usted crea grupos por área (Financiero, Fiscal, Compras, Legal) y define exactamente qué certificados puede acceder cada grupo. Cada colaborador solo ve lo que fue autorizado — principio de menor privilegio aplicado por defecto.',
     'faq.q4': '¿Funciona en Windows y macOS?',

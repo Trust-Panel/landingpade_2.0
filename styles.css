@@ -134,7 +134,7 @@
 
   /* SECTION HEADERS */
   section{padding:120px 0;position:relative;z-index:3}
-  .sec-head{max-width:720px;margin-bottom:72px}
+  .sec-head{max-width:980px;margin-bottom:72px}
   .sec-head .mono{margin-bottom:20px;display:inline-flex;align-items:center;gap:10px}
   .sec-head .mono::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold)}
   .sec-head h2{font-size:52px;letter-spacing:-0.03em;margin-bottom:20px;text-wrap:balance}
